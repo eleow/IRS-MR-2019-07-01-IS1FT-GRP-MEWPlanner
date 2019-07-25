@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+	<solutionClass>org.mew.domain.MealSolution</solutionClass>
+	<entityClass>org.mew.domain.MealSlot</entityClass>
+	<scoreDirectorFactory>
+		<!-- <scoreDefinitionType>HARD_SOFT</scoreDefinitionType> -->
+		<!-- <scoreDrl>org/btrg/optaplannerhellotest/solver/mealPlannerScoreRules.drl</scoreDrl> -->
+    	<easyScoreCalculatorClass>org.mew.domain.score.MealPlannerEasyScoreCalculator</easyScoreCalculatorClass>
+		<!-- <initializingScoreTrend>ONLY_DOWN</initializingScoreTrend> -->
+		<initializingScoreTrend>ONLY_DOWN</initializingScoreTrend>
+	</scoreDirectorFactory>
+	<localSearch>
+		<termination>
+			<bestScoreLimit>0hard/0soft</bestScoreLimit>
+    		<!-- <minutesSpentLimit>2</minutesSpentLimit> -->
+			<secondsSpentLimit>10</secondsSpentLimit>
+		</termination>
+		<acceptor>
+			<entityTabuSize>7</entityTabuSize>
+		</acceptor>
+		<forager>
+			<acceptedCountLimit>1000</acceptedCountLimit>
+		</forager>
+		<unionMoveSelector>
+			<changeMoveSelector>
+				<valueSelector variableName="foodId">
+					<filterClass>org.mew.domain.score.MealSlotTypeFilter</filterClass>
+				</valueSelector>
+			</changeMoveSelector>
+		</unionMoveSelector>
+	
+	</localSearch>
+</solver>
