@@ -11,7 +11,6 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.filechooser.FileSystemView;
 
-import org.mew.MealPlannerApp;
 import org.mew.domain.FoodItem.FoodType;
 import org.mew.domain.MealSlot.Meal;
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
@@ -31,6 +30,7 @@ public class MealSolution implements Serializable {
 	private static MealSolution single_instance = null;  // make MealSolution a singleton	
 	private HardSoftScore score;
 	private int mode = 1; // 0 - manual mode. 1 - automatic mode
+	public int debug_mode = 1;
 
 	List<FoodItem> foodDB;
 	List<MealSlot> mealsFor1Day; // List of 3 Meals. Each meal can have 1 drink, 1 main, up to 2 sides
@@ -218,7 +218,7 @@ public class MealSolution implements Serializable {
  //       HardSoftScore hardSoftScore = (HardSoftScore)MealPlannerApp.scoreDirector.calculateScore();
  //       System.out.println("SCORE "+ hardSoftScore.toString() );
 //        return hardSoftScore;
-        if (null != score)
+        if (null != score && debug_mode == 1)
           System.out.println("SCORE "+ score.toString() );
         return score;
     }

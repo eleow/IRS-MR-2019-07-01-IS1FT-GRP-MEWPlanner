@@ -25,5 +25,13 @@ public class TargetValues {
 		max_history = mhistory;
 	}
 	
+	public String toString() {
+		return "calories (kcal): " + calories_kcal
+				+ ", cal threshold: " + calories_deviation_threshold
+				+ ", sodium (mg):" + sodium_mg 
+				+ ", max_history: " + max_history;
+				 
+	}
+	
 	
 }
