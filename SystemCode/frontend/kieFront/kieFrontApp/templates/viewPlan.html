@@ -1,0 +1,42 @@
+{% extends 'baseLoggedIn.html' %}
+{% block title %}MealPlanner - View Plans{% endblock %}
+{% load static %}
+{% block scripthead %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/datatables.css' %}"/>
+{% endblock %}
+
+{% block content %}
+            <div class="signup-content">
+                    <h2 class="form-title"><span style="color: #417690;">{{user.username}}</span>, this is your personalised menu for the week <span style="font-size: 24px;">with an estimated {{ targets }} kcal/day</span></h2>
+                    
+                    <!-- <p>{{ result|safe }}</p> -->
+                    <div style="background:#fff">
+                        <small style="color: red"><strong>*Numbers show calories (kcal) for the meal</strong></small>
+                        {% for dayNum, v in result.items %}
+                        <h2><i class="fa fa-lemon-o" aria-hidden="true"></i> Day {{dayNum}} <i class="fa fa-lemon-o" aria-hidden="true"></i></h2>
+                        <table class="foodMenu" id="Day{{dayNum}}">
+                            {% for meal, fooditems in v.items %}
+                              {% if meal == "1" %} 
+                                <tr><th class="meal" colspan="2">breakfast</th></tr>
+                              {% elif meal == "2" %} 
+                                <tr><th class="meal" colspan="2">lunch</th></tr>
+                              {% elif meal == "3" %} 
+                                <tr><th class="meal" colspan="2">dinner </th></tr>
+                              {% endif %}
+                              {% for a in fooditems %}
+                                <tr>
+                                  <td>{{ a.name }}</td>
+                                  <td>{{ a.cal }}</td>
+                                </tr>
+                              {% endfor %}
+                            {% endfor %}
+                        </table>
+                        {% endfor %}                  
+                    </div>                    
+            </div>
+      
+{% endblock %}
+
+{% block extrascripts %}
+<script type="text/javascript" src="{% static 'js/datatables.min.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'baseLoggedIn.html' %}
+{% block title %}MealPlanner - Create Plan{% endblock %}
+{% load static %}
+{% block scripthead %}
+{% endblock %}
+{% block content %}
+            <div class="signup-content">
+                <form method="POST" id="createMeal-form" class="signup-form" action="/createPlan/">
+                    {% csrf_token %}
+                    <h2 class="form-title">Hi <span style="color: #417690;">{{user.username}}</span>, let's review your data before creating your meals</h2>
+                   
+                    <div class="form-group">
+                        <label for="id_weight">Weight (kg):</label>
+                        <input type="number" class="form-input" name="weight" id="id_weight" min="20" max="200" step="1" value="{{ user.weight|floatformat:0}}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_height">Height (cm):</label>
+                        <input type="number" class="form-input" name="height" id="id_height" min="50" max="300" step="1" value="{{ user.height|floatformat:0 }}"/>
+                   </div>
+                   <!-- Hidden fields -->
+                    <div>
+                        {% if user.gender == 0 %}
+                        <input type="hidden" class="form-input" name="gender" id="id_gender" value="Male" readonly />
+                        {% elif user.gender == 1 %}
+                        <input type="hidden" class="form-input" name="gender" id="id_gender" value="Female" readonly />
+                        {% endif %}
+                    </div>
+                    <div>
+                       <input type="hidden" class="form-input" name="age" id="id_age" value="{{ AGE|floatformat:2 }}" /> 
+                    </div>
+                    <!-- End of hidden fields -->
+
+                    <div class="form-group">
+                        <label for="id_bmi">BMI (kg/m2):</label>
+                        <input type="text" class="form-input readonly" name="bmi" id="id_bmi" value="{{ BMI|floatformat:2 }}" readonly />
+                        {% if BMI <= 18.5 %}
+                        <small id="h_bmi" style="color: red">Risk of nutritional deficiency diseases and osteoporosis</small>
+                        {% elif BMI < 23.0 %}
+                        <small id="h_bmi" style="color: grey">Maintain your healthy weight by balancing diet and exercise.</small>
+                        {% elif BMI < 27.5 %}
+                        <small id="h_bmi" style="color: #ff9900">Aim to lose 5-10% of your weight over the next 6-12 months for a healthier you</small>
+                        {% else %}
+                        <small id="h_bmi" style="color: red">You are at risk of numerous health problems. Aim to lose 5-10% of your weight over the next 6-12 months. Lose weight to stay healthy</small>
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_activity">Activity level:</label>
+                        <select name="activity" class="form-input" id="id_activity">
+                            <option value="0" {% if user.activity == 0 %}selected{% endif %}>Sedentary</option>
+                            <option value="1" {% if user.activity == 1 %}selected{% endif %}>Light</option>
+                            <option value="2" {% if user.activity == 2 %}selected{% endif %}>Moderate</option>
+                            <option value="3" {% if user.activity == 3 %}selected{% endif %}>Active</option>
+                            <option value="4" {% if user.activity == 4 %}selected{% endif %}>Very Active</option>
+                            <option value="5" {% if user.activity == 5 %}selected{% endif %}>Extra Active</option>
+                        </select>
+                        <small style="color: grey">Sedentary (Light or no exercise),
+                            Light (Exercise 1-3 times/week), Moderate (Exercise 4-5 times/week), 
+                            Active (Daily Exercise or intense exercise 3-4 times/week),
+                            Very Active (Intense Exercise 6-7 times/week), Extra Active (Very intense Exercise daily or physical job)</small>
+                   </div>
+
+                    <div class="form-group">
+                        <label for="id_goals">Weight goals:</label>
+                        <select name="goals" class="form-input" id="id_goals">
+                            <option value="0" >Maintain Weight</option>
+                            <option value="1" >Lose 0.1 kg/week</option>
+                            <option value="2" >Lose 0.2 kg/week</option>
+                            <option value="3" >Lose 0.4 kg/week</option>
+                            <option value="4" >Lose 0.9 kg/week</option>
+                        </select>
+                        <small style="color: grey">In general, it is recommended that you lose no more than 1-2 pounds (0.45 to 0.90 kg) per week</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_calories">Recommended Daily Calorie Intake:</label>
+                        <input type="text" class="form-input readonly" name="calories" id="id_calories" step="1" value="{{ Calories|floatformat:0 }}" readonly />
+                        <small id="h_cal" style="color: red"></small>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="submit" name="submit" id="createPlan_submit" class="form-submit" value="Create!"/>
+                      <!-- <button name="submit" id="createPlan_submit" class="form-submit">
+                        Please Wait <i class="fa fa-2x fa-spinner fa-pulse"></i>
+                      </button> -->
+                    </div> 
+                  
+
+                </form>
+            </div>
+      
+{% endblock %}

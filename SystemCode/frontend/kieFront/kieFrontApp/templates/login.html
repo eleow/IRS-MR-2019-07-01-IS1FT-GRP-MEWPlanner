@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}MealPlanner - Login{% endblock %}
+{% block content %}
+    <div class="main">
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                     
+                    <img src="/static/images/icons/salad.png" class="loader" style="width: 30%;">
+                    <form method="POST" id="login-form" class="signup-form">
+                        {% csrf_token %}
+                        <h2 class="form-title">Log In to Meal Planner account</h2>
+                        {% if form.errors %}
+                        <p style="color: red">Incorrect username or password. Please try again.</p>
+                        {% endif %}
+                        {% for field in form %}
+                        <div class="form-group">
+                             {{field.label_tag}}
+                             
+                             {% if field.field.required %}
+                             <span class="label_required">*</span>
+                             {% endif %}<br>
+
+                             <input type="{{ field.field.type }}" class="form-input" name="{{ field.html_name }}" id="{{ field.id_for_label }}" placeholder=""/>
+                             <br>
+                             <!-- {{ field }}<br> -->
+                             {% if field.name == "password" %}
+                             <span toggle1="#id_password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                             {% endif %}
+                        </div>
+                        {% endfor %}
+                     
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Log In"/>
+                        </div> 
+                    </form>
+                    <p class="loginhere">
+                        Don't have an account? <a href="/signup" class="loginhere-link">Sign up here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+{% endblock %}
+   
