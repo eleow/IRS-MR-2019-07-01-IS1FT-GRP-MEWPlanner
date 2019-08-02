@@ -4,7 +4,7 @@
 {% block scripthead %}
 {% endblock %}
 {% block content %}
-            <div class="signup-content">
+            <div class="loggedin-content">
                 <form method="POST" id="createMeal-form" class="signup-form" action="/createPlan/">
                     {% csrf_token %}
                     <h2 class="form-title">Hi <span style="color: #417690;">{{user.username}}</span>, let's review your data before creating your meals</h2>
@@ -75,7 +75,7 @@
                         <input type="text" class="form-input readonly" name="calories" id="id_calories" step="1" value="{{ Calories|floatformat:0 }}" readonly />
                         <small id="h_cal" style="color: red"></small>
                     </div>
-
+                    <br>
                     <div class="form-group">
                       <input type="submit" name="submit" id="createPlan_submit" class="form-submit" value="Create!"/>
                       <!-- <button name="submit" id="createPlan_submit" class="form-submit">

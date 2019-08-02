@@ -8,33 +8,42 @@
 {% block content %}
             <div class="loggedin-content">
                     <h2 class="form-title"><span style="color: #417690;">{{user.username}}</span>, this is your personalised menu for the week <br /><span style="font-size: 24px;">with an estimated {{ targets }} kcal/day</span></h2>
-                    <a href="/viewPlan/?details=more">More Details</a>
+                    <a href="/viewPlan/?details=less">Less Details</a>
                     <div style="background:#fff">
-                        <small style="color: red"><strong>*The numbers on the right of the menu show calories (kcal) for the meal</strong></small>
                         {% for dayNum, v in result.items %}
-                        <h2 class="meal-title">Day {{dayNum}} <i class="fa fa-lemon-o" aria-hidden="true"></i></h2>
-                        <table class="foodMenu" id="Day{{dayNum}}">
+                        <h2 class="meal-title">Day {{dayNum}}</h2>
+                        <table class="detailedMenu" id="Day{{dayNum}}">
                             {% for meal, fooditems in v.items %}
                               {% if meal == "1" %} 
-                                <tr><th class="meal" colspan="2">breakfast</th></tr>
+                                <tr><th class="meal" colspan="7">breakfast</th></tr>
                               {% elif meal == "2" %} 
-                                <tr><th class="meal" colspan="2">lunch</th></tr>
+                                <tr><th class="meal" colspan="7">lunch</th></tr>
                               {% elif meal == "3" %} 
-                                <tr><th class="meal" colspan="2">dinner </th></tr>
+                                <tr><th class="meal" colspan="7">dinner </th></tr>
                               {% endif %}
+                                <tr>
+                                  <th>name</th>
+                                  <th>calories (kcal)</th>
+                                  <th>sodium (mg)</th>
+                                  <th>carbo (kcal)</th>
+                                  <th>fats (kcal)</th>
+                                  <th>protein (kcal)</th>
+                                  <th>serving</th>
+                                </tr>
                               {% for a in fooditems %}
                                 <tr>
-                                  {% if a.type == "1" %}
-                                  <td><i class="fa fa-coffee" aria-hidden="true"></i> {{ a.name }}</td>
-                                  {% else %}
                                   <td>{{ a.name }}</td>
-                                  {% endif %}
                                   <td>{{ a.calories }}</td>
+                                  <td>{{ a.sodium}}</td>
+                                  <td>{{ a.carbohydrates}}</td>
+                                  <td>{{ a.fats}}</td>
+                                  <td>{{ a.protein}}</td>
+                                  <td>{{ a.serving}}</td>
+
                                 </tr>
                               {% endfor %}
                             {% endfor %}
                         </table>
-                        <hr class="accessory"></hr>
                         {% endfor %}                  
                     </div>                    
             </div>

@@ -165,6 +165,11 @@ h2 .form-title {
   text-transform: none;
 }
 
+h2.meal-title {
+  margin-bottom: 5px;
+  margin-top: 40px;
+}
+
 .clear {
   clear: both; }
 
@@ -239,6 +244,16 @@ body {
   -o-border-radius: 10px;
   -ms-border-radius: 10px;
   padding: 50px 85px; }
+
+.loggedin-content {
+  background: #ffffffdd;
+  border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0 0 10px 10px;
+  -o-border-radius: 0 0 10px 10px;
+  -ms-border-radius: 0 0 10px 10px;
+  padding: 50px 85px; }
+}
 
 .form-group {
   overflow: hidden;
@@ -360,6 +375,16 @@ input.form-submit[type="submit"] {
   cursor: pointer;
 }
 
+/* for smaller screens, we need to change the 'display' */
+@media screen and (max-width: 480px) {
+  a.form-submit {  
+    white-space: nowrap;
+    display: block;
+    margin: 10px;
+    text-align: center;
+  }
+}
+
 
 .label_required {
   /* content: "*"; */
@@ -462,8 +487,14 @@ input[type=checkbox]:not(old):checked + label > span:before {
   align-items: center;
   padding: 10px 40px;
   background: #417690;
+  /* background: #4CAF50; */
   color: #ffc;
   overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
 }
 
 #header a:link, #header a:visited {
@@ -548,26 +579,68 @@ table.foodMenu td {
   background-size: 8px 8px;
   background-repeat:repeat-x;
   background-position: left bottom;
-  }
+}
   
-  table.foodMenu td span{
+table.foodMenu td span{
   background-color:#fff;
-  }
+}
   
-  table.foodMenu td:first-child {
+table.foodMenu td:first-child {
   text-align: left;
   font-weight: 700;
-  }
+}
   
-  table.foodMenu td:first-child span{
+table.foodMenu td:first-child span{
   padding-right:.25em;
-  }
+}
 
-  table.foodMenu td:last-child {
+table.foodMenu td:last-child {
   text-align:right;
   width:3em;
-  }
+}
   
-  table.foodMenu td:last-child span{
+table.foodMenu td:last-child span{
   padding-left:.25em;
-  }
+}
+
+/* Detailed menu */
+table.detailedMenu {
+  border: 1px solid black;
+  table-layout: fixed;
+  width: 100%; 
+}
+table.detailedMenu th {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  /* background-color: #4CAF50; */
+  background-color: #417690;
+  color: white;
+}
+
+table.detailedMenu td, table.detailedMenu th {
+  
+}
+
+table.detailedMenu tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+hr.accessory {
+  height: 6px;
+  background-image: radial-gradient(closest-side, gray, rgba(128, 128, 128, 0) 100%);
+  position: relative;
+}
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  border: 0;
+  margin: 1.35em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+}

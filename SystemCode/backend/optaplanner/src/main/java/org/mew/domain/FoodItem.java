@@ -27,6 +27,7 @@ public class FoodItem {
 	public float carbohydrates_kcal;
 	public float protein_kcal;
 	public float fat_kcal;
+	public String serving;
 	
 	int id;
 //	public int type; // 1- Beverage, 2- Main, 3- Desserts/Sides, 4- Breakfast Main, 5 - Breakfast Side

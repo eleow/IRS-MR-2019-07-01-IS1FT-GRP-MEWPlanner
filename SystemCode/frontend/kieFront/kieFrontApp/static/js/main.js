@@ -102,8 +102,11 @@
     // Hide everything
     $('#createMeal-form').css("display", "none")
 
+    // Disable all links
+    $('a').contents().unwrap();
+
     // Show "Please Wait" loader
-    $(".signup-content")
+    $(".loggedin-content")
       .append("<h1 class=\"loader\">Please Wait</h1><img class=\"loader\" alt=\"Please Wait\" src=\"/static/images/loader-2_food.gif\">");
     
     amr = $('#id_calories').val();

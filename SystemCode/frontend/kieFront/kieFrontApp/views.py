@@ -90,13 +90,30 @@ class ViewPlanView(TemplateView):
                 if (not isMetaData):
                     day = row[0]
                     meal = row[1]
-                    typeF = row[2]
-                    nameF = row[3]
-                    cal = row[4]
+
+                    details = {
+                        "type": row[2],
+                        "name": row[3],
+                        "calories": row[4],
+                        "carbohydrates": row[5],
+                        "fats": row[6],
+                        "protein": row[7],
+                        "sodium": row[8],
+                        "serving": row[9]
+                    }
+                    
+                    # typeF = row[2]
+                    # nameF = row[3]
+                    # cal = row[4]
+                    # ncarbo = row[5]
+                    # nfats = row[6]
+                    # nprotein = row[7]
+                    # nserving = row[8]
 
                     if not day in foodPlans: foodPlans[day] = {}
                     if not meal in foodPlans[day]: foodPlans[day][meal] = []
-                    foodPlans[day][meal].append({"type": typeF, "name": nameF, "cal": cal})
+                    # foodPlans[day][meal].append({"type": typeF, "name": nameF, "cal": cal})
+                    foodPlans[day][meal].append(details)
         
         return foodPlans, targets
         # return json.dumps(foodPlans, indent=2)
@@ -118,8 +135,11 @@ class ViewPlanView(TemplateView):
             
             parsed, targets = self.parse(f)
 
-
-            return render(request, 'viewPlan.html', context={"result": parsed, "targets": targets})
+            details = request.GET.get('details')
+            if (details=="more"):
+                return render(request, 'viewPlanDetailed.html', context={"result": parsed, "targets": targets})
+            else:
+                return render(request, 'viewPlan.html', context={"result": parsed, "targets": targets})
         else:
            return redirect('/login/')
 

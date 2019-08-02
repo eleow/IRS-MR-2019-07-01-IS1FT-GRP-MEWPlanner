@@ -73,8 +73,7 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 		// TODO - Use word vector to ensure dissimilar foods
 		//
 		//
-		
-			
+					
 		// Allow deviation from target calories within a threshold, else penalize
 		float cal_deviation = Math.abs((target_cal - total_cal)/(target_cal));
 		if (cal_deviation > deviation_threshold) {

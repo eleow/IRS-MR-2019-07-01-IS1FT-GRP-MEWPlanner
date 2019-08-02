@@ -38,6 +38,8 @@ public class MealSolution implements Serializable {
 	List<Integer> foodIds;
 	TargetValues targets;
 	
+	public int plainWaterId = 0;
+	
 	// make constructor private for singleton
 	private MealSolution() {
 		readCSVDatabase("FoodDatabaseInput.csv");
@@ -106,12 +108,19 @@ public class MealSolution implements Serializable {
 						float FCARBO = Float.valueOf(nextRecord[16]);
 						float FFAT = Float.valueOf(nextRecord[17]);
 						float FPROTEIN = Float.valueOf(nextRecord[18]);
+						String FSERVING = nextRecord[3];
 						String FPLACE = nextRecord[5];
 						int FRECENCY = FTYPE == FoodType.BEVERAGE ? -1: 7;
+						
+						//Save id for PlainWater
+						if (FTYPE == FoodType.BEVERAGE && FNAME.contains("Plain Water")) {
+							plainWaterId = foodId;							
+						}
 												
 						//System.out.println(linenum);
 						FoodItem item = new FoodItem(foodId++, FTYPE, FNAME, FCALORIES, FNA, FCARBO, FFAT, FPROTEIN, FRECENCY);
 						item.place = FPLACE;
+						item.serving = FSERVING;
 						foodDB.add(item);
 					}
 					

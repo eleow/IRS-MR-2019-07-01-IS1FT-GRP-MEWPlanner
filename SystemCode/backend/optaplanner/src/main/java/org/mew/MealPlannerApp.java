@@ -58,7 +58,7 @@ public class MealPlannerApp {
 		mealSolution.setTargets(targets);
 		mealSolution.debug_mode = debug_mode;
 		
-		if (debug_mode == 0) System.out.println("Day,Meal,Type,Name,Calories,Carbohydrates,Fats,Protein");
+		if (debug_mode == 0) System.out.println("Day,Meal,Type,Name,Calories,Carbohydrates,Fats,Protein,Sodium,Serving Size");
 
 		// Get solutions
 		for (int i = 1; i <= numDays; ++i) {
@@ -82,6 +82,10 @@ public class MealPlannerApp {
 				if (item.recency >= 0) best.getFoodDB().get(id).recency = 0;
 			});
 		
+		// if drink is empty, default to plain water
+		for (MealSlot s : best.getMealsFor1Day()) {
+			if (s.getType() == FoodType.BEVERAGE && s.getFoodId() == 0) s.setFoodId(best.plainWaterId);
+		}
 
 		// Print solution either for debugging or as output to frontend
 		printSolution(best, runNumber);
@@ -107,13 +111,13 @@ public class MealPlannerApp {
 			System.out.println("\n\nSolution for Day " + runNumber);
 			
 			for (MealSlot s : best.getMealsFor1Day()) {
-				int id = s.getFoodId();
+				int id = s.getFoodId();							
 				FoodItem item = best.getFoodDB().get(id);
 				
 				if (s.getType() == FoodType.BEVERAGE) System.out.println();	
 				System.out.println(s.getType().getValue() + "_" + item.type.getValue() + " " + item.recency + ":"
 						+ item.name + " (Cal:" + item.calories + ", C:" + item.carbohydrates_kcal + ", F:" + item.fat_kcal
-						+ ", P:" + item.protein_kcal + ", Na:" + item.sodium + ")" + item.place);
+						+ ", P:" + item.protein_kcal + ", Na:" + item.sodium + ")" + item.place + " (" + item.serving + ")");
 				
 				na += item.sodium;
 				cal += item.calories;
@@ -135,10 +139,10 @@ public class MealPlannerApp {
 					FoodItem item = best.getFoodDB().get(id);
 					String fName = item.name.replaceAll(",", "");
 								
-					//ruNumber, type
-					String line = String.format("%d,%d,%d,%s,%.2f,%.2f,%.2f,%.2f", 
+					//
+					String line = String.format("%d,%d,%d,%s,%.2f,%.2f,%.2f,%.2f,%.2f,%s", 
 							runNumber, s.meal.getValue(), item.type.getValue(), fName, 
-							item.calories, item.carbohydrates_kcal, item.fat_kcal, item.protein_kcal);
+							item.calories, item.carbohydrates_kcal, item.fat_kcal, item.protein_kcal, item.sodium, item.serving);
 					System.out.println(line);
 				}
 				

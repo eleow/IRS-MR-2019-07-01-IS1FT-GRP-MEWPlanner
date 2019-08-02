@@ -2,10 +2,10 @@
 {% block title %}MealPlanner Home{% endblock %}
 
 {% block content %}
-            <div class="signup-content">
+            <div class="loggedin-content">
                 {% csrf_token %}
                 <img src="/static/images/icons/salad.png" class="loader" style="width: 30%;">
-                <h2 class="form-title">Hi {{user.username}}, what would you like to do today?</h2>
+                <h2 class="form-title">Hi <span style="color: #417690;">{{user.username}}</span>, what would you like to do today?</h2>
                 <a id="but_viewPlan" class="form-submit" href="/viewPlan/">View My Existing Plans</a>
                 <a id="but_createPlan" class="form-submit" href="/createPlan/">Create new Meal Plan</a>
 
