@@ -1,7 +1,9 @@
-﻿## SECTION 1 : PROJECT TITLE
-## Our Title XXXX
+﻿# IRS-MR-2019-07-01-IS1FT-GRP-MEWPlanner
 
-XXXX
+## SECTION 1 : PROJECT TITLE
+## Meal Planner for Diabetics
+
+![MEWPlanner](/SystemCode/frontEnd/kieFrontApp/static/images/icons/salad.png?raw=true&s=100)
 
 ---
 
@@ -15,9 +17,11 @@ XXXX
 
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
-| Wilson Lum Kok Keong| A1234567A | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567A@nus.edu.sg |
-| Ng Mei Ying | A1234567B | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567B@gmail.com |
-| Edmund Leow | A1234567C | xxxxxxxxxx yyyyyyyyyy zzzzzzzzzz| A1234567C@outlook.com |
+| Ng Mei Ying | A0198546L | • Nutritionist sourcing and liaison <br>• Database clean-up <br>• Genetic Algorithm optimisation <br>• Project Report| e0402087@u.nus.edu |
+| Edmund Leow | A0198458H | • Website design and implementation<br>• Business rules formulation<br>• OptaPlanner optimisation<br>• System Integration<br>• User Guide and Video | e0401999@u.nus.edu |
+| Wilson Lum Kok Keong| A0198478A | • Literature review<br>• Project Report<br>• Heroku deployment| e0402019@u.nus.edu |
+
+
 
 ---
 
@@ -36,14 +40,14 @@ Please refer to the user guide documentation in this repository for:
 - Steps on running of the system demo
 - Test Scenarios
 
-`<Github File Link>` : <https://github.com/eleow/IRS-MR-2019-07-01-IS1FT-GRP-XXX/blob/master/UserGuide/User%20Guide.pdf>
+`<Github File Link>` : <https://github.com/eleow/IRS-MR-2019-07-01-IS1FT-GRP-MEWPlanner/blob/master/UserGuide/User%20Guide.pdf>
 
 ---
 ## SECTION 6 : PROJECT REPORT / PAPER
 
 The Project Report can be downloaded from this repository. Direct Link can be found below.
 
-`<Github File Link>` : <https://github.com/eleow/IRS-MR-2019-07-01-IS1FT-GRP-XXX/blob/master/ProjectReport/Project%20Report%20.pdf>
+`<Github File Link>` : <https://github.com/eleow/IRS-MR-2019-07-01-IS1FT-GRP-MEWPlanner/blob/master/ProjectReport/Project%20Report%20.pdf>
 
 ---
 

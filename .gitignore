@@ -3,3 +3,4 @@
 __pycache__/
 
 **/_Misc/
+.vscode/settings.json
