@@ -1,7 +1,4 @@
 calories (kcal): 2563.0, cal threshold: 0.05, sodium (mg):2300.0, max_history: 7
-SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 Day,Meal,Type,Name,Calories,Carbohydrates,Fats,Protein,Sodium,Serving Size
 1,1,1,Tea with sugar,63.75,63.75,0.00,0.00,0.00,Cup (255g)
 1,1,4,Plain Breakfast cereal without whole grains,92.70,83.08,1.22,8.41,230.70,Bowl-rice (11and 1/2 cm) (30g)

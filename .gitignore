@@ -1,3 +1,5 @@
 ### Django ###
 *.pyc
 __pycache__/
+
+**/_Misc/
