@@ -36,7 +36,12 @@ public class MealPlannerApp {
 				float dev_cal = mapTargets.get("dev_calories", float.class, 0.05f);
 				float max_sodium = mapTargets.get("max_sodium", float.class, 2300f);
 				int max_history = mapTargets.get("max_history", int.class, 7);
-				targets = new TargetValues(cal, dev_cal, max_sodium, 0f, 0f, 0f, max_history);
+				
+				float max_sugar = mapTargets.get("max_sugar", float.class, 30f);
+				float carbs_kcal_frac = mapTargets.get("carbs_frac", float.class, 0.5f);
+				float dev_carbs = mapTargets.get("dev_carbs", float.class, 0.05f);
+				
+				targets = new TargetValues(cal, dev_cal, max_sodium, carbs_kcal_frac, 0f, 0f, max_history, max_sugar, dev_carbs);
 						
 				numDays = mapTargets.get("days", int.class, 7);
 				debug_mode = ini.get("settings", "debug_mode", int.class);
@@ -48,7 +53,7 @@ public class MealPlannerApp {
 			}
 			
 		} else {
-			 targets = new TargetValues(2072f, 0.05f, 2300f, 0f, 0f, 0f, 7);
+			 targets = new TargetValues(2562f, 0.05f, 2300f, 0.5f, 0f, 0f, 7, 30, 0.05f);
 		}
 
 		SolverFactory<MealSolution> solverFactory = SolverFactory.createFromXmlResource(SOLVER_CONFIG_XML);
@@ -103,6 +108,11 @@ public class MealPlannerApp {
 		
 		float na = 0;
 		float cal = 0;
+		float carbs = 0;
+		float fats = 0;
+		float protein = 0;
+		float sugar = 0;
+		
 		float tcal = best.getTargets().calories_kcal;
 		float tna = best.getTargets().sodium_mg;
 		
@@ -121,14 +131,23 @@ public class MealPlannerApp {
 				
 				na += item.sodium;
 				cal += item.calories;
+				carbs += item.carbohydrates_kcal;
+				fats += item.fat_kcal;
+				protein += item.protein_kcal;
+				if (item.sugar_g > 0) sugar += item.sugar_g;
+				
 
 				// Update recency for food items that have been chosen
 //				if (item.recency >= 0)
 //					best.getFoodDB().get(id).recency = 0;
 			}
 
+			carbs = carbs/cal *100;
+			fats = fats/cal * 100;
+			protein = protein/cal * 100;
+			
 			System.out.println();
-			System.out.println("Total calories: " + cal + "/" + tcal + ". Total sodium: " + na + "/" + tna);
+			System.out.println("Totals - Calories: " + cal + "/" + tcal + ". Sodium: " + na + "/" + tna + ". Sugar(g): " + sugar + ". Carbs(%): " + carbs + ". Fats(%): " + fats + ". Protein(%): " + protein );
 			System.out.println(best.getScore().toString());
 		}
 		else {

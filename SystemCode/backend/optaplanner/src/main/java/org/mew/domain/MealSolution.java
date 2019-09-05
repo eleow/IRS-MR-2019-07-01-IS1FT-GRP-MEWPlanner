@@ -85,7 +85,7 @@ public class MealSolution implements Serializable {
 			int foodId = 1;
 			
 			foodDB = new ArrayList<FoodItem>();
-			foodDB.add(new FoodItem(0, FoodType.OTHERS, "Empty", 0f, 0f, 0f, 0f, 0f, -1)); // Empty item
+			foodDB.add(new FoodItem(0, FoodType.OTHERS, "Empty", 0f, 0f, 0f, 0f, 0f, 0f, -1)); // Empty item
 			
 			// Read data line by line
 			while ((nextRecord = csvReader.readNext()) != null) {
@@ -103,11 +103,12 @@ public class MealSolution implements Serializable {
 					if (FTYPE != FoodType.OTHERS) {
 					
 						String FNAME = nextRecord[0];
-						float FCALORIES = Float.valueOf(nextRecord[19]);
-						float FNA = Float.valueOf(nextRecord[15]);
-						float FCARBO = Float.valueOf(nextRecord[16]);
-						float FFAT = Float.valueOf(nextRecord[17]);
-						float FPROTEIN = Float.valueOf(nextRecord[18]);
+						float FCALORIES = Float.valueOf(nextRecord[20]);
+						float FSUGAR = Float.valueOf(nextRecord[14]); // some rows have N/A. Replaced with -1
+						float FNA = Float.valueOf(nextRecord[16]);
+						float FCARBO = Float.valueOf(nextRecord[17]);
+						float FFAT = Float.valueOf(nextRecord[18]);
+						float FPROTEIN = Float.valueOf(nextRecord[19]);
 						String FSERVING = nextRecord[3];
 						String FPLACE = nextRecord[5];
 						int FRECENCY = FTYPE == FoodType.BEVERAGE ? -1: 7;
@@ -118,7 +119,7 @@ public class MealSolution implements Serializable {
 						}
 												
 						//System.out.println(linenum);
-						FoodItem item = new FoodItem(foodId++, FTYPE, FNAME, FCALORIES, FNA, FCARBO, FFAT, FPROTEIN, FRECENCY);
+						FoodItem item = new FoodItem(foodId++, FTYPE, FNAME, FCALORIES, FNA, FSUGAR, FCARBO, FFAT, FPROTEIN, FRECENCY);
 						item.place = FPLACE;
 						item.serving = FSERVING;
 						foodDB.add(item);
@@ -138,25 +139,24 @@ public class MealSolution implements Serializable {
 			foodDB = new ArrayList<FoodItem>();
 			// create some food items for testing
 			int count = 1;
-			foodDB.add(new FoodItem(0, FoodType.OTHERS, "Empty", 0f, 0f, 0f, 0f, 0f, -1)); // Empty item
+			foodDB.add(new FoodItem(0, FoodType.OTHERS, "Empty", 0f, 0f, 0f, 0f, 0f, 0f, -1)); // Empty item
 			
-			foodDB.add(new FoodItem(count++, FoodType.BEVERAGE, "Milo", 120.18f, 51.05f, 87.80f, 15.03f, 17.35f, -1));
-			foodDB.add(new FoodItem(count++, FoodType.BEVERAGE, "Green Tea", 35f, 7.5f, 35f, 0f, 0f, -1));
-			foodDB.add(new FoodItem(count++, FoodType.BEVERAGE, "Brewed Coffee", 3.7f, 3.1f, 2.94f, 0f, 0.76f, -1));
-			foodDB.add(new FoodItem(count++, FoodType.BEVERAGE, "Bubble Tea with Pearls", 441.33f, 46.95f, 441.33f, 0f, 0f, -1));
+			foodDB.add(new FoodItem(count++, FoodType.BEVERAGE, "Milo", 120.18f, 51.05f, 16.0f, 87.80f, 15.03f, 17.35f, -1));
+			foodDB.add(new FoodItem(count++, FoodType.BEVERAGE, "Green Tea", 35f, 7.5f, 8.25f, 35f, 0f, 0f, -1));
+			foodDB.add(new FoodItem(count++, FoodType.BEVERAGE, "Brewed Coffee", 3.7f, 3.1f, 0.62f, 2.94f, 0f, 0.76f, -1));
 			
-			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Fish and Chips", 849.56f, 624.44f, 427f, 263.35f, 159.21f, 7));
-			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Fish ball mee pok dry", 481.5f, 2551.5f, 276.91f, 62f, 142.59f, 7));
-			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Zinger Burger", 632.1f, 1167.6f, 264.65f, 212.4f, 155.04f, 7));
-			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Zha Jiang Mian", 669.9f, 1404.48f, 392.85f, 143.79f, 133.26f, 7));
-			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Fried Rice", 499.65f, 1850.91f, 306.17f, 102.24f, 91.24f, 7));
-			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Wanton noodles dry", 411.06f, 1454.24f, 278.01f, 66.63f, 96.42f, 7));
-			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Wanton noodles soup", 318.04f, 1969.63f, 169.27f, 32.4f, 116.37f, 7));
-			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Nasi Goreng", 741.57f, 1466.53f, 503.61f, 132.80f, 105.16f, 7));
+//			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Fish and Chips", 849.56f, 624.44f, 427f, 263.35f, 159.21f, 7));
+			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Fish ball mee pok dry", 481.5f, 2551.5f, 9.45f, 276.91f, 62f, 142.59f, 7));
+			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Zinger Burger", 632.1f, 1167.6f, 0f, 264.65f, 212.4f, 155.04f, 7));
+			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Zha Jiang Mian", 669.9f, 1404.48f, 0f, 392.85f, 143.79f, 133.26f, 7));
+			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Fried Rice", 499.65f, 1850.91f, 0f, 306.17f, 102.24f, 91.24f, 7));
+			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Wanton noodles dry", 411.06f, 1454.24f, 0f, 278.01f, 66.63f, 96.42f, 7));
+			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Wanton noodles soup", 318.04f, 1969.63f, 0f, 169.27f, 32.4f, 116.37f, 7));
+			foodDB.add(new FoodItem(count++, FoodType.MAIN, "Nasi Goreng", 741.57f, 1466.53f, 0f, 503.61f, 132.80f, 105.16f, 7));
 			
-			foodDB.add(new FoodItem(count++, FoodType.SIDE, "Papaya slice", 76.43f, 15.75f, 71.25f, 1.06f, 4.13f, 7));
-			foodDB.add(new FoodItem(count++, FoodType.SIDE, "Watermelon slice", 24.69f, 2.67f, 20.88f, 1.04f, 2.77f, 7));
-			foodDB.add(new FoodItem(count++, FoodType.SIDE, "Deep fried carrot cake", 179.4f, 475.8f, 132.02f, 30.95f, 16.42f, 7));						
+			foodDB.add(new FoodItem(count++, FoodType.SIDE, "Papaya slice", 76.43f, 15.75f, 0f, 71.25f, 1.06f, 4.13f, 7));
+			foodDB.add(new FoodItem(count++, FoodType.SIDE, "Watermelon slice", 24.69f, 2.67f, 0f, 20.88f, 1.04f, 2.77f, 7));
+			foodDB.add(new FoodItem(count++, FoodType.SIDE, "Deep fried carrot cake", 179.4f, 475.8f, 0f, 132.02f, 30.95f, 16.42f, 7));						
 		}
 		
 	}

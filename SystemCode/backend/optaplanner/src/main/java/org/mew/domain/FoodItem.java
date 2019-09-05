@@ -24,6 +24,7 @@ public class FoodItem {
 
 	public float calories;
 	public float sodium;
+	public float sugar_g;
 	public float carbohydrates_kcal;
 	public float protein_kcal;
 	public float fat_kcal;
@@ -45,11 +46,12 @@ public class FoodItem {
 		
 	}
 	
-	public FoodItem(int id, FoodType type, String name, float calories, float sodium, float c, float f, float p, int recency) {
+	public FoodItem(int id, FoodType type, String name, float calories, float sodium, float sugar, float c, float f, float p, int recency) {
 		this.id = id;
 		this.type = type;
 		this.name = name;
 		this.calories = calories;
+		this.sugar_g = sugar;
 		this.sodium = sodium;
 		this.carbohydrates_kcal = c;
 		this.protein_kcal = p;

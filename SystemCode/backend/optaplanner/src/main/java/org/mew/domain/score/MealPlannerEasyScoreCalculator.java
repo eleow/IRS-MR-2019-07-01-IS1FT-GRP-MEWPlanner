@@ -25,6 +25,14 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 		float deviation_threshold = solution.getTargets().calories_deviation_threshold; //0.05f;
 		float max_history = solution.getTargets().max_history;
 		
+//		float target_carbs = target_cal * 0.5f;
+//		float carbs_deviation_threshold = target_cal * 0.05f;
+
+		// Carbs should be 45-55% of total kcal/day
+		float target_carbs = solution.getTargets().carbs_kcal_frac; //0.5f;	// of total calories in kcal
+		float carbs_deviation_threshold = solution.getTargets().carbs_deviation_threshold; // 0.05f;
+		float max_sugar = solution.getTargets().sugar_g; //30;
+
 
 		List<MealSlot> meals = solution.getMealsFor1Day();
 		Set<Integer> idSet = new HashSet<Integer>();
@@ -35,11 +43,17 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 		int main_counter = 0;
 		int place_counter = 0;
 		
+		float total_carbs = 0;
+		float carbs_distribution_penalty = 0; // if meal has carbs exceeding range, penalise by difference
+		float total_sugar = 0;
+		
 		for (MealSlot slot: meals) {
 			int id = slot.getFoodId();
 			FoodItem item = solution.getFoodDB().get(id);
 			total_cal += item.calories;
 			total_sodium += item.sodium;
+			total_carbs += item.carbohydrates_kcal;
+			if (item.sugar_g > 0) total_sugar += item.sugar_g;
 			
 			// check for duplicates
 			if (id != 0 && idSet.add(id) == false) {
@@ -58,6 +72,10 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 			if (item.recency >= 0 && item.recency < max_history) {
 				hardScore += -(max_history - item.recency) * 100;
 			}
+			
+			// check for carbs/meal distribution
+			//target_carbs_in_meal = 
+			
 		}
 		
 		// Penalize if there are meals that are in different places
@@ -80,6 +98,15 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 			hardScore += -(int)(cal_deviation * 1000);
 		}
 		
+//		float carbo_deviation = Math.abs((target_carbo - total_carbs));
+//		if (carbo_deviation > carbo_deviation_threshold) {
+//			hardScore += -(int)(carbo_deviation * 1000);
+//		}
+		float carbs_deviation = Math.abs((target_carbs * total_cal - total_carbs)/ total_cal);
+		if (carbs_deviation > carbs_deviation_threshold) {
+			hardScore += -(int)(carbs_deviation * 1000);
+		}
+				
 		// Must always have total of 3 mains else penalize
 		if (main_counter < 3) {
 			hardScore += (main_counter - 3) * 100;
@@ -90,9 +117,11 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 		if (sodium_deviation < 0) {
 			hardScore -= Math.abs(sodium_deviation) * 10;
 		} 
-//		else {
-//			softScore += Math.abs(sodium_deviation);
-//		}
+		
+		// total sugars should be < max_sugar
+		if (total_sugar > max_sugar) {
+			softScore += Math.abs(total_sugar - max_sugar) * 100;
+		}
 	
 //		System.out.print("|" + place_counter);;
 		return HardSoftScore.valueOf(hardScore, softScore);

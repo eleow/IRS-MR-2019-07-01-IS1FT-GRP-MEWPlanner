@@ -3,7 +3,7 @@
 ## SECTION 1 : PROJECT TITLE
 ## Meal Planner for Diabetics
 
-![MEWPlanner](/SystemCode/frontEnd/kieFrontApp/static/images/icons/salad.png?raw=true&s=100)
+![MEWPlanner](/SystemCode/frontend/kieFrontApp/static/images/icons/salad.png?raw=true&s=100)
 
 ---
 
@@ -19,7 +19,7 @@ XXXX
 | :------------ |:---------------:| :-----| :-----|
 | Ng Mei Ying | A0198546L | • Nutritionist sourcing and liaison <br>• Database clean-up <br>• Genetic Algorithm optimisation <br>• Project Report| e0402087@u.nus.edu |
 | Edmund Leow | A0198458H | • Website design and implementation<br>• Business rules formulation<br>• OptaPlanner optimisation<br>• System Integration<br>• User Guide and Video | e0401999@u.nus.edu |
-| Wilson Lum Kok Keong| A0198478A | • Literature review<br>• Project Report<br>• Heroku deployment| e0402019@u.nus.edu |
+| Wilson Lum Kok Keong| A0198478A | • Literature review<br>• System testing<br>• Project Report<br>• Heroku deployment| e0402019@u.nus.edu |
 
 
 
