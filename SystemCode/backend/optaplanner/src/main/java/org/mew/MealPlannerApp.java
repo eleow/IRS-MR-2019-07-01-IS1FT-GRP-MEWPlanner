@@ -120,27 +120,38 @@ public class MealPlannerApp {
 		if (debug_mode == 1) {
 			System.out.println("\n\nSolution for Day " + runNumber);
 			
+			float meal_carbs = 0; float meal_sugar = 0;
 			for (MealSlot s : best.getMealsFor1Day()) {
 				int id = s.getFoodId();							
 				FoodItem item = best.getFoodDB().get(id);
 				
-				if (s.getType() == FoodType.BEVERAGE) System.out.println();	
+				if (s.getType() == FoodType.BEVERAGE) {
+					if (meal_carbs > 0) System.out.println("Total carbs:" + meal_carbs + ", sugar:" + meal_sugar); // for breakfast and lunch
+					System.out.println();
+					meal_carbs = 0; meal_sugar = 0;
+				}
+				
 				System.out.println(s.getType().getValue() + "_" + item.type.getValue() + " " + item.recency + ":"
 						+ item.name + " (Cal:" + item.calories + ", C:" + item.carbohydrates_kcal + ", F:" + item.fat_kcal
-						+ ", P:" + item.protein_kcal + ", Na:" + item.sodium + ")" + item.place + " (" + item.serving + ")");
+						+ ", P:" + item.protein_kcal + ", Na:" + item.sodium + ", Sugar(g):" + item.sugar_g + ")" + item.place + " (" + item.serving + ")");
 				
 				na += item.sodium;
 				cal += item.calories;
 				carbs += item.carbohydrates_kcal;
 				fats += item.fat_kcal;
 				protein += item.protein_kcal;
-				if (item.sugar_g > 0) sugar += item.sugar_g;
+				if (item.sugar_g > 0) {
+					sugar += item.sugar_g;
+					meal_sugar += item.sugar_g;
+				}
 				
+				meal_carbs += item.carbohydrates_kcal;
 
 				// Update recency for food items that have been chosen
 //				if (item.recency >= 0)
 //					best.getFoodDB().get(id).recency = 0;
-			}
+			}			
+			System.out.println("Total carbs:" + meal_carbs + ", sugar:" + meal_sugar); // for dinner
 
 			carbs = carbs/cal *100;
 			fats = fats/cal * 100;
