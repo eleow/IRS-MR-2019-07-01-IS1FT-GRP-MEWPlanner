@@ -25,7 +25,7 @@ SECRET_KEY = '%=w_x(vo6p8l*b)_*3oe&mu^)i584s*^_09r=c5l-@a)+hq5-f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mewplanner.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kieFrontApp',
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
@@ -117,8 +118,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 LOGIN_URL = '/login'
 LOGOUT_URL = '/logout'

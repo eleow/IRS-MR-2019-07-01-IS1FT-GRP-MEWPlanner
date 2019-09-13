@@ -170,9 +170,9 @@ public class MealPlannerApp {
 					String fName = item.name.replaceAll(",", "");
 								
 					//
-					String line = String.format("%d,%d,%d,%s,%.2f,%.2f,%.2f,%.2f,%.2f,%s", 
+					String line = String.format("%d,%d,%d,%s,%.2f,%.2f,%.2f,%.2f,%.2f,%s,%s", 
 							runNumber, s.meal.getValue(), item.type.getValue(), fName, 
-							item.calories, item.carbohydrates_kcal, item.fat_kcal, item.protein_kcal, item.sodium, item.serving);
+							item.calories, item.carbohydrates_kcal, item.fat_kcal, item.protein_kcal, item.sodium, item.serving, item.sugar_g);
 					System.out.println(line);
 				}
 				
