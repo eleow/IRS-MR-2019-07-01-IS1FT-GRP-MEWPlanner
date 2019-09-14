@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import TemplateView
 from requests.exceptions import HTTPError
 from django.template import loader
@@ -21,9 +21,11 @@ from os.path import abspath, dirname, join, realpath, isfile
 from os import getcwd, chdir, chmod
 from os import stat as stat2
 import stat
+import random
 
 import csv
 import json
+import threading
 
 ACTIVITY_DICT = {
     0: 1.2,
@@ -55,6 +57,13 @@ def signup(request):
         form = NewUserForm()
     return render(request, 'signup.html', {'form': form})
 
+def createNewPlan(pathJar, configFileName, pathOutfile):
+    print(pathJar)
+    outfile = open(pathOutfile,'w+')
+    # # Note - popen is non-blocking, call is blocking.
+    # p = subprocess.call(['java', '-jar', pathJar, "config.ini"], stdout=outfile, stderr=outfile, shell=True)
+    p = subprocess.Popen(['java', '-jar', pathJar, configFileName], stdout=outfile, stderr=outfile, shell=False) #shell must be False for unix (See https://stackoverflow.com/questions/2400878/why-subprocess-popen-doesnt-work-when-args-is-sequence)
+    outfile.close()
 
 def CalculateCalories(gender, wt, ht, age, activity):
     if (gender == 0):
@@ -63,8 +72,8 @@ def CalculateCalories(gender, wt, ht, age, activity):
         bmr = 10*wt + 6.25*ht - 5*age - 161 
     return activity * bmr 
 
-def CreateConfigIni(dirPath, debug_mode, sp_calories, dev_calories, max_sodium, numdays):
-   f = open(join(dirPath, "config.ini"),'w+') 
+def CreateConfigIni(dirPath, fileName, debug_mode, sp_calories, dev_calories, max_sodium, numdays):
+   f = open(join(dirPath, fileName),'w+') 
    f.write("[settings]\n")
    f.write("debug_mode = " + str(debug_mode) + "\n\n")
    f.write("[targets]\n")
@@ -85,12 +94,14 @@ class ViewPlanView(TemplateView):
             readCSV = csv.reader(csvfile, delimiter=",")
             foodPlans = {}
             isMetaData = True
+            isEndOfFile = False
             targets = []
             for row in readCSV:
                 # print(row)
                 if ("calories" in row[0]): targets = ''.join(i for i in row[0] if i.isdigit() or i == ".")
                 if (row[0] == "1"): isMetaData = False
-                if (not isMetaData):
+                if ('~END' in row[0]): isEndOfFile = True
+                if (not isMetaData and not isEndOfFile):
                     day = row[0]
                     meal = row[1]
 
@@ -111,7 +122,7 @@ class ViewPlanView(TemplateView):
                     foodPlans[day][meal].append(details)
         # print(targets)
         # print(foodPlans)
-        return foodPlans, targets
+        return foodPlans, targets, isEndOfFile
         # return json.dumps(foodPlans, indent=2)
 
     def get(self, request, **kwargs):
@@ -129,13 +140,23 @@ class ViewPlanView(TemplateView):
                 # Redirect to createPlan
                 return redirect('/createPlan/' ) 
             
-            parsed, targets = self.parse(f)
+            parsed, targets, isEndOfFile = self.parse(f)
 
-            details = request.GET.get('details')
-            if (details=="more"):
-                return render(request, 'viewPlanDetailed.html', context={"result": parsed, "targets": targets})
+            if (isEndOfFile):
+                details = request.GET.get('details')
+                if (details=="more"):
+                    return render(request, 'viewPlanDetailed.html', context={"result": parsed, "targets": targets})
+                else:
+                    return render(request, 'viewPlan.html', context={"result": parsed, "targets": targets})
             else:
-                return render(request, 'viewPlan.html', context={"result": parsed, "targets": targets})
+                myText = ""
+                myTextArr = ["Initiating magic solver", 
+                    "Gathering magical ingredients", "Warming up magical pot", "Cutting garnishes",
+                    "Finding cooks", "Finding helpers", "Preheating oven", "Mixing ingredients", "Slicing ingredients"]
+                if (parsed != None and len(parsed) == 0): 
+                    myText = random.choice(myTextArr)
+
+                return render(request, 'waitingPage.html', context={"done": len(parsed), "text": myText})
         else:
            return redirect('/login/')
 
@@ -176,30 +197,21 @@ class CreatePlanView(TemplateView):
             chdir(dir_path)
 
             # Generate input file for optaplanner            
-            target_calories = request.POST["calories"]
-            CreateConfigIni(dir_path, 0, target_calories, 0.05, 2300, 7) 
-
             fileId = ''.join(e for e in request.user.username if e.isalnum()) # strip any special characters from username
+            target_calories = request.POST["calories"]
+
+            configFileName = fileId + "_config.ini"
             pathJar = abspath(join(dir_path, "optaplanner.jar"))
-            outfile = open(join(dir_path, fileId + "_results.txt"),'w+')
+            pathOutfile = join(dir_path, fileId + "_results.txt")
+            CreateConfigIni(dir_path, configFileName, 0, target_calories, 0.05, 2300, 7) 
 
             # for heroku. In unix, need to do chmod +x
             st = stat2('./optaplanner.jar')
             chmod("./optaplanner.jar", st.st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
 
-            print(pathJar)
-            # # Note - popen is non-blocking, call is blocking.
-            # p = subprocess.call(['java', '-jar', pathJar, "config.ini"], stdout=outfile, stderr=outfile, shell=True)
-            p = subprocess.Popen(['java', '-jar', pathJar, 'config.ini'], stdout=outfile, stderr=outfile, shell=False) #shell must be False for unix (See https://stackoverflow.com/questions/2400878/why-subprocess-popen-doesnt-work-when-args-is-sequence)
-            
-            # (stdoutdata, stderrdata) = p.communicate() # so that it will block
-            # stdoutdata = stdoutdata.decode().replace("\r\n", "<br>")
-
-            # print(stdoutdata)
-            outfile.close()
-
-            # return render(request, 'viewPlan.html', context= {'test': stdoutdata})
-            return redirect('/viewPlan/' ) # cannot pass in context with redirect`
+            # break thread for processing
+            threading.Thread(target=createNewPlan, args=(pathJar, configFileName, pathOutfile)).start()
+            return HttpResponseRedirect('/viewPlan/')
         else:
            return redirect('/login/')
 

@@ -1,0 +1,26 @@
+{% extends 'baseLoggedIn.html' %}
+{% block title %}MealPlanner - Create Plan{% endblock %}
+{% load static %}
+{% block scripthead %}
+    <script>
+        setTimeout(function() {window.location.href = '/viewPlan/'}, 5000);
+    </script>
+{% endblock %}
+{% block content %}
+            <div class="loggedin-content">                
+                <h1 class="loader">Please Wait</h1>
+                <img class="loader" alt="Please Wait" src="/static/images/loader-2_food.gif">
+                {% if done == 0 %}
+                <h2 class="loader">{{text}}</h1>
+                {% elif done > 0 %}
+                <h2 class="loader">Solving for Day {{done}}/7</h2>
+                {% endif %}
+                <div class="loadbar-border">
+                        <div class="loadbar" style="height:24px;width:{% widthratio done 7 100 %}%">
+                            <div class="loadbar-text">{% widthratio done 7 100 %}%</div>
+                        </div>
+                    </div>
+            </div>
+            
+      
+{% endblock %}

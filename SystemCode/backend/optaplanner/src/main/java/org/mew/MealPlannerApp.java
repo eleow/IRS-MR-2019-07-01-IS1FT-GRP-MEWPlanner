@@ -75,6 +75,7 @@ public class MealPlannerApp {
 			MealSolution bestMealSolution = (MealSolution) solver.getBestSolution();
 			printSolutionUpdateRecency(bestMealSolution, i);
 		}
+		if (debug_mode == 0) System.out.println("~END"); // Signal to frontend that it's done
 	}
 
 	static void printSolutionUpdateRecency(MealSolution best, int runNumber) {

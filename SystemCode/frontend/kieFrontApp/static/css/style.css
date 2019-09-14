@@ -644,3 +644,16 @@ hr {
   box-sizing: border-box;
   overflow: hidden;
 }
+
+.loadbar-border {
+  border: 2px solid #ccc!important;
+  background-color: #fff!important;
+}
+.loadbar {
+  padding: 8px 16px!important;
+  color: #fff!important;
+  background-color: #417690!important;
+}
+.loadbarText {
+  text-align: center!important;
+}
