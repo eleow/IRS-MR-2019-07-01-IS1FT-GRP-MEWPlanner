@@ -24,3 +24,10 @@
             
       
 {% endblock %}
+
+{% block extrascripts %}
+<script>
+    $('a').contents().unwrap();
+    $("#user-tools").hide()
+</script>
+{% endblock %}

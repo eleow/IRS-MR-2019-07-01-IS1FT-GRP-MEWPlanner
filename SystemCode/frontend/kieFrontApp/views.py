@@ -113,7 +113,8 @@ class ViewPlanView(TemplateView):
                         "fats": row[6],
                         "protein": row[7],
                         "sodium": row[8],
-                        "serving": row[9]
+                        "serving": row[9],
+                        "sugar": row[10]    # to do
                     }
                     
                     if not day in foodPlans: foodPlans[day] = {}

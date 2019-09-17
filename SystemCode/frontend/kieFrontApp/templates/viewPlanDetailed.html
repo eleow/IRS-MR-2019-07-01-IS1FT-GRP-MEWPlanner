@@ -15,30 +15,35 @@
                         <table class="detailedMenu" id="Day{{dayNum}}">
                             {% for meal, fooditems in v.items %}
                               {% if meal == "1" %} 
-                                <tr><th class="meal" colspan="7">breakfast</th></tr>
+                                <tr><th class="meal" colspan="8">breakfast</th></tr>
                               {% elif meal == "2" %} 
-                                <tr><th class="meal" colspan="7">lunch</th></tr>
+                                <tr><th class="meal" colspan="8">lunch</th></tr>
                               {% elif meal == "3" %} 
-                                <tr><th class="meal" colspan="7">dinner </th></tr>
+                                <tr><th class="meal" colspan="8">dinner </th></tr>
                               {% endif %}
                                 <tr>
                                   <th>name</th>
-                                  <th>calories (kcal)</th>
-                                  <th>sodium (mg)</th>
-                                  <th>carbo (kcal)</th>
-                                  <th>fats (kcal)</th>
-                                  <th>protein (kcal)</th>
                                   <th>serving</th>
+                                  <th>calories (kcal)</th>
+                                  <th>protein (g)</th>
+                                  <th>fats (g)</th>
+                                  <th>carbs (g)</th>
+                                  <th>sugars (g)</th>
+                                  <th>sodium (mg)</th>
                                 </tr>
                               {% for a in fooditems %}
                                 <tr>
                                   <td>{{ a.name }}</td>
-                                  <td>{{ a.calories }}</td>
-                                  <td>{{ a.sodium}}</td>
-                                  <td>{{ a.carbohydrates}}</td>
-                                  <td>{{ a.fats}}</td>
-                                  <td>{{ a.protein}}</td>
                                   <td>{{ a.serving}}</td>
+                                  <td>{{ a.calories }}</td>
+                                  <td>{% widthratio a.protein 4 1 %}</td>
+                                  <td>{% widthratio a.fats 9 1 %}</td>
+                                  <td>{% widthratio a.carbohydrates 4 1 %}</td>
+                                  <td>{% widthratio a.sugar 4 1 %}</td>
+                                  <!-- <td>{{ a.protein }}</td> -->
+                                  <!-- <td>{{ a.fats}}</td> -->
+                                  <!-- <td>{{ a.carbohydrates}}</td> -->
+                                  <td>{{ a.sodium}}</td>
 
                                 </tr>
                               {% endfor %}

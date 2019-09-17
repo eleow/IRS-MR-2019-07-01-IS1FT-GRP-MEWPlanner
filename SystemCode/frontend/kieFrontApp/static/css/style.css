@@ -488,7 +488,8 @@ input[type=checkbox]:not(old):checked + label > span:before {
   padding: 10px 40px;
   background: #417690;
   /* background: #4CAF50; */
-  color: #ffc;
+  /* color: #ffc; */
+  color: #fff;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
@@ -606,7 +607,7 @@ table.foodMenu td:last-child span{
 /* Detailed menu */
 table.detailedMenu {
   border: 1px solid black;
-  table-layout: fixed;
+  /* table-layout: fixed; */
   width: 100%; 
 }
 table.detailedMenu th {
