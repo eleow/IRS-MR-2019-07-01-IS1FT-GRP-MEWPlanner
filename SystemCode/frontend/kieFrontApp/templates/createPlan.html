@@ -62,11 +62,31 @@
                     <div class="form-group">
                         <label for="id_goals">Weight goals:</label>
                         <select name="goals" class="form-input" id="id_goals">
+                            {% if BMI <= 18.5 %}
+                            <option value="4" >Lose 1 kg/week</option>
+                            <option value="3" >Lose 0.75 kg/week</option>
+                            <option value="2" >Lose 0.5 kg/week</option>
+                            <option value="1" >Lose 0.25 kg/week</option>
+                            <option selected value="0" >Maintain Weight</option>
+                            {% elif BMI < 23.0 %}
+                            <option value="4" >Lose 1 kg/week</option>
+                            <option value="3" >Lose 0.75 kg/week</option>
+                            <option value="2" >Lose 0.5 kg/week</option>
+                            <option value="1" >Lose 0.25 kg/week</option>
+                            <option selected value="0" >Maintain Weight</option>
+                            {% elif BMI < 27.5 %}
+                            <option value="4" >Lose 1 kg/week</option>
+                            <option value="3" >Lose 0.75 kg/week</option>
+                            <option selected value="2" >Lose 0.5 kg/week</option>
+                            <option value="1" >Lose 0.25 kg/week</option>
                             <option value="0" >Maintain Weight</option>
-                            <option value="1" >Lose 0.1 kg/week</option>
-                            <option value="2" >Lose 0.2 kg/week</option>
-                            <option value="3" >Lose 0.4 kg/week</option>
-                            <option value="4" >Lose 0.9 kg/week</option>
+                            {% else %}
+                            <option value="4" >Lose 1 kg/week</option>
+                            <option selected value="3" >Lose 0.75 kg/week</option>
+                            <option value="2" >Lose 0.5 kg/week</option>
+                            <option value="1" >Lose 0.25 kg/week</option>
+                            <option value="0" >Maintain Weight</option>
+                            {% endif %}
                         </select>
                         <small style="color: grey">In general, it is recommended that you lose no more than 1-2 pounds (0.45 to 0.90 kg) per week</small>
                     </div>

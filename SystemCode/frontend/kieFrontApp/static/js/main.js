@@ -36,15 +36,20 @@
     if (bmi <= 18.5) {
       tip = "Risk of nutritional deficiency diseases and osteoporosis";
       color = "red";
+      $('#id_goals').val(0) 
     } else if (bmi < 23.0) {
       tip = "Maintain your healthy weight by balancing diet and exercise";
       color = "grey";
+      $('#id_goals').val(0) 
     } else if (bmi < 27.5) {
       tip = "Aim to lose 5-10% of your weight over the next 6-12 months for a healthier you";
       color = "#ff9900";
+      $('#id_goals').val(2) 
+
     } else {
       tip = "You are at risk of numerous health problems. Aim to lose 5-10% of your weight over the next 6-12 months. Lose weight to stay healthy";
       color = "red";
+      $('#id_goals').val(3) 
     }
     $('#h_bmi').text(tip);
     $('#h_bmi').css("color", color);
@@ -52,7 +57,7 @@
 
   function updateAMR() {
     let act_arr = [1.2, 1.375, 1.465, 1.55, 1.725, 1.9];
-    let lose_weight_arr = [0, 0.1, 0.2, 0.4, 0.9]; // For safe weight loss, it is recommended that you lose no more than 1-2 pounds per week (0.45-0.9)
+    let lose_weight_arr = [0, 0.25, 0.5, 0.75, 1.0]; // For safe weight loss, it is recommended that you lose no more than 1-2 pounds per week (0.45-0.9)
 
     let wt = $('#id_weight').val();
     let ht = $('#id_height').val();
