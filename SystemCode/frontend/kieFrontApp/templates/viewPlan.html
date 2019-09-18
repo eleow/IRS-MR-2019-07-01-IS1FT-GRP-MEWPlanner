@@ -17,8 +17,12 @@
                             {% for meal, fooditems in v.items %}
                               {% if meal == "1" %} 
                                 <tr><th class="meal" colspan="2">breakfast</th></tr>
+                              {% elif meal == "4" %} 
+                                <tr><th class="meal" colspan="2">mid-morning snack</th></tr>
                               {% elif meal == "2" %} 
                                 <tr><th class="meal" colspan="2">lunch</th></tr>
+                              {% elif meal == "5" %} 
+                                <tr><th class="meal" colspan="2">mid-afternoon snack</th></tr>
                               {% elif meal == "3" %} 
                                 <tr><th class="meal" colspan="2">dinner </th></tr>
                               {% endif %}

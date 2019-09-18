@@ -7,6 +7,7 @@ import org.ini4j.Wini;
 import org.mew.domain.FoodItem;
 import org.mew.domain.FoodItem.FoodType;
 import org.mew.domain.MealSlot;
+import org.mew.domain.MealSlot.Meal;
 import org.mew.domain.MealSolution;
 import org.mew.domain.TargetValues;
 import org.optaplanner.core.api.solver.Solver;
@@ -41,7 +42,15 @@ public class MealPlannerApp {
 				float carbs_kcal_frac = mapTargets.get("carbs_frac", float.class, 0.5f);
 				float dev_carbs = mapTargets.get("dev_carbs", float.class, 0.05f);
 				
-				targets = new TargetValues(cal, dev_cal, max_sodium, carbs_kcal_frac, 0f, 0f, max_history, max_sugar, dev_carbs);
+				boolean isDiabetic = mapTargets.get("diabetic", int.class, 1) == 1? true: false;
+				boolean takesBeef = mapTargets.get("takes_beef", int.class, 1) == 1? true: false;
+				String foodPreference = mapTargets.get("prefers", String.class, "none").toLowerCase();
+				int max_caffeine = mapTargets.get("max_caffeine", int.class, 1);
+				
+				
+				targets = new TargetValues(
+						cal, dev_cal, max_sodium, carbs_kcal_frac, 0f, 0f, max_history, max_sugar, dev_carbs,
+						isDiabetic, foodPreference, max_caffeine, takesBeef);
 						
 				numDays = mapTargets.get("days", int.class, 7);
 				debug_mode = ini.get("settings", "debug_mode", int.class);
@@ -53,14 +62,15 @@ public class MealPlannerApp {
 			}
 			
 		} else {
-			 targets = new TargetValues(2562f, 0.05f, 2300f, 0.5f, 0f, 0f, 7, 30, 0.05f);
+			 targets = new TargetValues(2400f, 0.05f, 2300f, 0.5f, 0f, 0f, 7, 30, 0.05f,
+					 true, "chinese", 1, true);
 		}
 
 		SolverFactory<MealSolution> solverFactory = SolverFactory.createFromXmlResource(SOLVER_CONFIG_XML);
 		Solver<MealSolution> solver = solverFactory.buildSolver();
 
-		MealSolution mealSolution = MealSolution.getInstance();
-		mealSolution.setTargets(targets);
+		MealSolution mealSolution = MealSolution.getInstance(targets);
+//		mealSolution.setTargets(targets);
 		mealSolution.debug_mode = debug_mode;
 		
 		if (debug_mode == 0) System.out.println("Day,Meal,Type,Name,Calories,Carbohydrates,Fats,Protein,Sodium,Serving Size");
@@ -122,12 +132,16 @@ public class MealPlannerApp {
 			System.out.println("\n\nSolution for Day " + runNumber);
 			
 			float meal_carbs = 0; float meal_sugar = 0;
+			Meal mtype = Meal.BREAKFAST;
 			for (MealSlot s : best.getMealsFor1Day()) {
+				
 				int id = s.getFoodId();							
 				FoodItem item = best.getFoodDB().get(id);
 				
-				if (s.getType() == FoodType.BEVERAGE) {
-					if (meal_carbs > 0) System.out.println("Total carbs:" + meal_carbs + ", sugar:" + meal_sugar); // for breakfast and lunch
+//				if (s.getType() == FoodType.BEVERAGE || s.getType() == FoodType.SNACK) {
+				if (s.meal != mtype) {
+					mtype = s.meal;
+					if (meal_carbs > 0) System.out.println("Total carbs:" + meal_carbs + ", sugar (excluding from fruits):" + meal_sugar); // for breakfast and lunch
 					System.out.println();
 					meal_carbs = 0; meal_sugar = 0;
 				}
@@ -141,7 +155,9 @@ public class MealPlannerApp {
 				carbs += item.carbohydrates_kcal;
 				fats += item.fat_kcal;
 				protein += item.protein_kcal;
-				if (item.sugar_g > 0) {
+				
+				// add sugar for non-fruits
+				if (item.sugar_g > 0 && !item.hasFruits) {
 					sugar += item.sugar_g;
 					meal_sugar += item.sugar_g;
 				}
@@ -152,7 +168,7 @@ public class MealPlannerApp {
 //				if (item.recency >= 0)
 //					best.getFoodDB().get(id).recency = 0;
 			}			
-			System.out.println("Total carbs:" + meal_carbs + ", sugar:" + meal_sugar); // for dinner
+			System.out.println("Total carbs:" + meal_carbs + ", sugar (excluding from fruits):" + meal_sugar); // for dinner
 
 			carbs = carbs/cal *100;
 			fats = fats/cal * 100;

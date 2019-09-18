@@ -41,23 +41,34 @@ public class MealSolution implements Serializable {
 	public int plainWaterId = 0;
 	
 	// make constructor private for singleton
-	private MealSolution() {
+	private MealSolution(TargetValues targets) {
+		this.targets = targets; //new TargetValues();
+		
 		readCSVDatabase("FoodDatabaseInput.csv");
-//		readCSVDatabase("D:\\Users\\Edmund\\Desktop\\FoodDatabaseInput.csv");
-		//generateFoodDB();		
 		initialiseUnusedIds();
-		targets = new TargetValues();
+		
+	}
+	private MealSolution() {
+		this.targets = new TargetValues();
+		readCSVDatabase("FoodDatabaseInput.csv");		
+		initialiseUnusedIds();
 	}
 	
     // static method to create instance of Singleton class 
-    public static MealSolution getInstance() 
+    public static MealSolution getInstance(TargetValues targets) 
     { 
-        if (single_instance == null) 
-            single_instance = new MealSolution(); 
+        if (single_instance == null) {
+            single_instance = new MealSolution(targets); 
+        }
   
         return single_instance; 
     } 
-	
+    
+//    public static MealSolution getInstance()
+//    {
+//    	return single_instance;
+//    }
+//	
 	private void readCSVDatabase(String filePath) {
 		
 		if (null != foodDB) return; 
@@ -91,37 +102,73 @@ public class MealSolution implements Serializable {
 			while ((nextRecord = csvReader.readNext()) != null) {
 				if (linenum != 1) {
 					FoodType FTYPE = FoodType.OTHERS;
+					boolean hasFruit = false;
+					boolean hasVeg = false; 
 					switch(nextRecord[4]) {
 						case "Drink": FTYPE = FoodType.BEVERAGE; break;
+
 						case "Main": FTYPE = FoodType.MAIN; break;
-						case "Side": FTYPE = FoodType.SIDE; break;
+						case "Salad": FTYPE = FoodType.MAIN; hasVeg = true; break;					
+//						case "Salad": FTYPE = FoodType.SIDE; hasVeg = true; break;
+
 						case "Breakfast": FTYPE = FoodType.BREAKFAST_MAIN; break;
-						case "BreakfastSide": FTYPE = FoodType.BREAKFAST_SIDE; break;
+
+						case "Fruits": FTYPE = FoodType.SNACK; hasFruit = true; break;
+						case "Snack": FTYPE = FoodType.SNACK; break;
+													
 						default: FTYPE = FoodType.OTHERS; break;
 					}
 					
 					if (FTYPE != FoodType.OTHERS) {
 					
 						String FNAME = nextRecord[0];
-						float FCALORIES = Float.valueOf(nextRecord[20]);
-						float FSUGAR = Float.valueOf(nextRecord[14]); // some rows have N/A. Replaced with -1
-						float FNA = Float.valueOf(nextRecord[16]);
-						float FCARBO = Float.valueOf(nextRecord[17]);
-						float FFAT = Float.valueOf(nextRecord[18]);
-						float FPROTEIN = Float.valueOf(nextRecord[19]);
 						String FSERVING = nextRecord[3];
 						String FPLACE = nextRecord[5];
-						int FRECENCY = FTYPE == FoodType.BEVERAGE ? -1: 7;
+						String FCUISINE = nextRecord[6];
+						boolean hasBeef = nextRecord[7].compareToIgnoreCase("1") == 0 ? true: false;
+						boolean hasCaffeine = nextRecord[8].compareToIgnoreCase("1") == 0 ? true: false;
+												
+						float FSUGAR = Float.valueOf(nextRecord[9]);
+						float FNA = Float.valueOf(nextRecord[10]);
+						float FCARBO = Float.valueOf(nextRecord[11]);
+						float FFAT = Float.valueOf(nextRecord[12]);
+						float FPROTEIN = Float.valueOf(nextRecord[13]);
+						
+						float FCALORIES = Float.valueOf(nextRecord[14]);
+
+						
+//						float FCALORIES = Float.valueOf(nextRecord[20]);
+//						float FSUGAR = Float.valueOf(nextRecord[14]); // some rows have N/A. Replaced with -1
+//						float FNA = Float.valueOf(nextRecord[16]);
+//						float FCARBO = Float.valueOf(nextRecord[17]);
+//						float FFAT = Float.valueOf(nextRecord[18]);
+//						float FPROTEIN = Float.valueOf(nextRecord[19]);
+//						String FSERVING = nextRecord[3];
+//						String FPLACE = nextRecord[5];
+//						int FRECENCY = FTYPE == FoodType.BEVERAGE ? -1: 7;
+						int FRECENCY = 7;
+						
+						// For beverages, it is likely that typical person will only repeat water, coffee and tea
+						if (FTYPE == FoodType.BEVERAGE && (FNAME.toLowerCase().contains("water") 
+								|| FNAME.toLowerCase().contains("coffee") || FNAME.toLowerCase().contains("tea")))
+							FRECENCY = -1;
+
 						
 						//Save id for PlainWater
 						if (FTYPE == FoodType.BEVERAGE && FNAME.contains("Plain Water")) {
 							plainWaterId = foodId;							
 						}
-												
+																						
 						//System.out.println(linenum);
 						FoodItem item = new FoodItem(foodId++, FTYPE, FNAME, FCALORIES, FNA, FSUGAR, FCARBO, FFAT, FPROTEIN, FRECENCY);
 						item.place = FPLACE;
 						item.serving = FSERVING;
+						item.cuisine = FCUISINE;
+						item.hasFruits = hasFruit;
+						item.hasVeg = hasVeg;
+						item.hasCaffeine = hasCaffeine;
+						item.hasBeef = hasBeef;
+
 						foodDB.add(item);
 					}
 					
@@ -177,19 +224,30 @@ public class MealSolution implements Serializable {
 			// breakfast
 			mealsFor1Day.add(new MealSlot(Meal.BREAKFAST, FoodType.BEVERAGE));
 			mealsFor1Day.add(new MealSlot(Meal.BREAKFAST, FoodType.BREAKFAST_MAIN));
-			mealsFor1Day.add(new MealSlot(Meal.BREAKFAST, FoodType.BREAKFAST_SIDE));
-			mealsFor1Day.add(new MealSlot(Meal.BREAKFAST, FoodType.BREAKFAST_SIDE));
+//			mealsFor1Day.add(new MealSlot(Meal.BREAKFAST, FoodType.BREAKFAST_SIDE));
+//			mealsFor1Day.add(new MealSlot(Meal.BREAKFAST, FoodType.BREAKFAST_SIDE));
+			
+			// snack1
+			if (targets.isDiabetic) {
+				mealsFor1Day.add(new MealSlot(Meal.SNACK1, FoodType.SNACK));
+//				mealsFor1Day.add(new MealSlot(Meal.SNACK1, FoodType.SNACK));
+			}
 			
 			// lunch
 			mealsFor1Day.add(new MealSlot(Meal.LUNCH, FoodType.BEVERAGE));
 			mealsFor1Day.add(new MealSlot(Meal.LUNCH, FoodType.MAIN));
-			mealsFor1Day.add(new MealSlot(Meal.LUNCH, FoodType.SIDE));
-//			mealsFor1Day.add(new MealSlot(Meal.LUNCH, FoodType.SIDE));
+//			mealsFor1Day.add(new MealSlot(Meal.LUNCH, FoodType.SNACK));
+
+			// snack2
+			if (targets.isDiabetic) {
+				mealsFor1Day.add(new MealSlot(Meal.SNACK2, FoodType.SNACK));
+//				mealsFor1Day.add(new MealSlot(Meal.SNACK2, FoodType.SNACK));
+			}
 			
 			// dinner
 			mealsFor1Day.add(new MealSlot(Meal.DINNER, FoodType.BEVERAGE));
 			mealsFor1Day.add(new MealSlot(Meal.DINNER, FoodType.MAIN));
-			mealsFor1Day.add(new MealSlot(Meal.DINNER, FoodType.SIDE));
+//			mealsFor1Day.add(new MealSlot(Meal.DINNER, FoodType.SNACK));
 //			mealsFor1Day.add(new MealSlot(Meal.DINNER, FoodType.SIDE));
 		}
 	}

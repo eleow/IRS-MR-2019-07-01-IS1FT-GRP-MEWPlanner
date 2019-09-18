@@ -72,7 +72,11 @@ def CalculateCalories(gender, wt, ht, age, activity):
         bmr = 10*wt + 6.25*ht - 5*age - 161 
     return activity * bmr 
 
-def CreateConfigIni(dirPath, fileName, debug_mode, sp_calories, dev_calories, max_sodium, numdays):
+def CreateConfigIni(dirPath, fileName, debug_mode, sp_calories, dev_calories, max_sodium, numdays=7, cuisine='0', takes_beef=1):
+
+   CUISINE_CHOICES = {'0': 'none', '1': 'chinese', '2': 'malay', '3': 'indian', '4': 'western'}
+   cuisine_str = CUISINE_CHOICES.get(cuisine, 'none')
+
    f = open(join(dirPath, fileName),'w+') 
    f.write("[settings]\n")
    f.write("debug_mode = " + str(debug_mode) + "\n\n")
@@ -82,6 +86,14 @@ def CreateConfigIni(dirPath, fileName, debug_mode, sp_calories, dev_calories, ma
    f.write("max_sodium = " + str(max_sodium) + "\n")
    f.write("days = " + str(numdays) + "\n")
    f.write("max_history = " + str(numdays) + "\n")
+   f.write("max_sugar = 30\n")
+   f.write("max_caffeine = 1\n")
+   f.write("carbs_frac = 0.5\n")
+   f.write("dev_carbs = 0.05\n")
+   f.write("diabetic = 1\n")
+   f.write("prefers = " + cuisine_str+ "\n")
+   f.write("takes_beef = " + str(takes_beef) + "\n")
+
    f.close()
 
 
@@ -114,7 +126,7 @@ class ViewPlanView(TemplateView):
                         "protein": row[7],
                         "sodium": row[8],
                         "serving": row[9],
-                        "sugar": row[10]    # to do
+                        "sugar": row[10] if len(row) >= 11 else 0    # to do
                     }
                     
                     if not day in foodPlans: foodPlans[day] = {}
@@ -200,11 +212,13 @@ class CreatePlanView(TemplateView):
             # Generate input file for optaplanner            
             fileId = ''.join(e for e in request.user.username if e.isalnum()) # strip any special characters from username
             target_calories = request.POST["calories"]
+            cuisine_preference = request.POST["cuisine_preference"]
+            takes_beef = request.POST["takes_beef"]
 
             configFileName = fileId + "_config.ini"
             pathJar = abspath(join(dir_path, "optaplanner.jar"))
             pathOutfile = join(dir_path, fileId + "_results.txt")
-            CreateConfigIni(dir_path, configFileName, 0, target_calories, 0.05, 2300, 7) 
+            CreateConfigIni(dir_path, configFileName, 0, target_calories, 0.05, 2300, 7, cuisine = cuisine_preference, takes_beef = takes_beef)
 
             # for heroku. In unix, need to do chmod +x
             st = stat2('./optaplanner.jar')

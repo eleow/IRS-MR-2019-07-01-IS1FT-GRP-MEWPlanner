@@ -6,7 +6,7 @@ public class FoodItem {
 	
 	public enum FoodType {
 		// Higher values are of higher importance/difficulty in matching
-		OTHERS(0), BEVERAGE(1), MAIN(2), SIDE(3), BREAKFAST_MAIN(4), BREAKFAST_SIDE(5);
+		OTHERS(0), BEVERAGE(1), MAIN(2), SIDE(3), BREAKFAST_MAIN(4), BREAKFAST_SIDE(5), SNACK(6);
 		
 		
 		private final int value;
@@ -35,11 +35,14 @@ public class FoodItem {
 	public String name;
 	public int recency;	// how recent was this introduced (99 - never, 1 - just yesterday)
 	
-	// todo
+	// Extra fields
 	public String place; // eg. If it is a fast-food, we should not mix with non-fast food
-	boolean hasFish;
-	boolean hasVeg;
-	boolean hasFruits;
+	public boolean hasFish;
+	public boolean hasVeg;
+	public boolean hasFruits;
+	public boolean hasCaffeine;
+	public boolean hasBeef;
+	public String cuisine;
 	 
 	
 	public FoodItem() {
@@ -59,6 +62,12 @@ public class FoodItem {
 		this.recency = recency;
 		
 		this.place = "";
+		this.cuisine = "";
+		
+		hasVeg = false;
+		hasFruits = false;
+		hasCaffeine = false;
+		hasBeef = false;
 	}
 	
 	public String getDetails() {

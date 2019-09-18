@@ -1,0 +1,62 @@
+calories (kcal): 1717.0, cal threshold: 0.05, sodium (mg):2300.0, sugar (g):30.0, carbs: 0.5 (+-0.05), isDiabetic: true, takesBeef:true, max_history: 7
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Day,Meal,Type,Name,Calories,Carbohydrates,Fats,Protein,Sodium,Serving Size
+1,1,1,Plain low fat milk,94.20,31.20,27.00,36.00,107.50,1 cup (200 ml),7.8
+1,1,4,Overnight oats oats + low fat milk + seeds unsweetened,436.80,170.80,183.60,82.40,109.00,1 portion (321 g),12.9
+1,4,6,Pineapple,48.42,45.24,0.90,2.28,10.45,Slice (95g),9.98
+1,2,1,Coca Cola Light,2.64,1.32,0.00,1.32,19.80,Can (330g),0.0
+1,2,2,Claypot rice with chicken chinese sausage and mushroom,602.40,249.60,223.20,129.60,1464.00,1 plate (400 g),4.5
+1,5,6,Chinese pear,53.71,47.76,2.79,3.16,6.29,Whole (169g),8.91
+1,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+1,3,2,Fried rice with ham and vegetables,395.74,253.80,100.62,41.32,453.25,Bowl-soup (16 and 1/2 cm) (250g),0.28
+2,1,1,Mr Bean black soya milk,231.61,63.24,90.09,78.28,29.00,1 cup (473 ml),5.01
+2,1,4,Mr Bean pearly beancurd,199.30,132.00,40.50,26.80,26.30,1 serving (356 g),10.8
+2,4,6,Grapefruit,44.00,39.68,1.08,3.24,0.00,One half (240.8g),8.63
+2,2,1,Oolong tea no sugar,4.00,2.00,0.00,2.00,13.00,1 cup (200 ml),0.0
+2,2,2,Bee tai mak dry,510.30,227.60,204.30,78.40,1000.00,1 bowl (311 g),2.5
+2,5,6,Peach,44.80,43.24,1.08,0.48,2.48,Whole (138g),10.56
+2,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+2,3,2,Economical porridge + 2 vegetables + 1 deep-fried meat,604.70,240.80,261.90,102.00,868.00,1 plate (553 g),12.5
+3,1,1,Mr Bean classic soya milk,142.00,5.70,8.00,11.80,23.50,1 cup (473 ml),4.1
+3,1,4,Mr Bean kaya cheese pancake,289.40,186.80,73.80,28.80,128.80,1 pancake (136 g),13.3
+3,4,6,Golden kiwi,41.55,37.12,0.63,3.80,4.38,Whole (83g),6.87
+3,2,1,Roasted green tea no sugar,2.00,0.00,0.00,2.00,8.00,1 cup (200 ml),0.0
+3,2,2,Fried mee sua,693.70,248.40,303.30,142.00,1532.00,1 plate (450 g),7.4
+3,5,6,Banana,38.52,35.28,1.08,2.16,3.85,Whole (medium) (50g),5.12
+3,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+3,3,2,Raw tuna with minced tuna don,439.30,237.20,18.90,183.20,65.00,1 portion (382 g),0.3
+4,1,1,Mr Bean grass jelly soya milk,138.80,64.00,36.00,38.80,55.30,1 cup (473 ml),4.7
+4,1,4,Mr Bean granola beancurd,269.66,151.20,71.10,47.36,26.30,1 serving (313 g),9.3
+4,4,6,Chinese pear,53.71,47.76,2.79,3.16,6.29,Whole (169g),8.91
+4,2,1,Roasted green tea no sugar,2.00,0.00,0.00,2.00,8.00,1 cup (200 ml),0.0
+4,2,2,Economical rice+1 non-fried meat+2 vegetables,572.60,272.00,181.80,118.80,926.00,1 plate (500 g),5.2
+4,5,6,Pineapple,48.42,45.24,0.90,2.28,10.45,Slice (95g),9.98
+4,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+4,3,2,Teriyaki chicken don,582.32,266.72,192.96,122.64,860.51,Plate-23cm (369g),7.31
+5,1,1,Soyabean milk without sugar,84.20,12.00,45.00,27.20,30.00,1 cup (200 ml),2.8
+5,1,4,Overnight oats oats + low fat milk & plain yoghurt + seeds unsweetened,455.30,180.40,184.50,90.40,143.00,1 portion (453 g),15.3
+5,4,6,Peach,44.80,43.24,1.08,0.48,2.48,Whole (138g),10.56
+5,2,1,Espresso,0.61,0.00,0.45,0.16,4.20,1 portion (30g),0.0
+5,2,2,Tempura udon,576.60,254.00,261.00,61.60,1830.00,1 big bowl (616 g),7.4
+5,5,6,Grapefruit,44.00,39.68,1.08,3.24,0.00,One half (240.8g),8.63
+5,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+5,3,2,Spaghetti with tuna sauce,460.21,241.96,132.57,85.68,263.05,Plate-20cm (300g),4.4
+6,1,1,Low fat milk fortified with protein,143.00,58.24,42.12,42.64,150.80,Cup (260g),0.0
+6,1,4,Oats + soya milk + raisin without sugar,257.00,143.60,70.20,43.20,33.00,1 bowl (300 g),15.5
+6,4,6,Orange,40.95,35.52,0.99,4.44,3.33,Whole (150g),8.88
+6,2,1,Tea tarik teh tarik less sugar,68.90,36.40,22.50,10.00,32.00,1 cup (200 ml),9.1
+6,2,2,Duck porridge,594.79,213.16,154.71,226.92,1272.06,Bowl-soup (16 and 1/2 cm) (573g),0.0
+6,5,6,Golden kiwi,41.55,37.12,0.63,3.80,4.38,Whole (83g),6.87
+6,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+6,3,2,Economical rice+1 non fried meat + 1 vegetable,527.10,261.60,157.50,108.00,756.00,1 plate (400 g),2.9
+7,1,1,Tea tarik teh tarik less sugar,68.90,36.40,22.50,10.00,32.00,1 cup (200 ml),9.1
+7,1,4,Overnight oats oats + low fat milk & plain yoghurt unsweetened,299.80,170.80,66.60,62.40,140.00,1 portion (293 g),14.9
+7,4,6,Pineapple,48.42,45.24,0.90,2.28,10.45,Slice (95g),9.98
+7,2,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+7,2,2,Indian white rice + 1 deep-fried meat + 1 non-fried vegetables,605.10,267.60,197.10,140.40,527.00,1 plate (394 g),2.1
+7,5,6,Chinese pear,53.71,47.76,2.79,3.16,6.29,Whole (169g),8.91
+7,3,1,Natural mineral water,0.00,0.00,0.00,0.00,26.40,Can (330g),0.0
+7,3,2,Indian white rice + 1 non-fried meat + 1 non-fried vegetables,589.50,269.60,179.10,140.80,683.00,1 plate (420 g),2.6
+~END

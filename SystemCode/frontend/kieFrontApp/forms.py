@@ -32,6 +32,8 @@ class NewUserForm(UserCreationForm):
         "Light (Exercise 1-3 times/week), Moderate (Exercise 4-5 times/week), " \
         "Active (Daily Exercise or intense exercise 3-4 times/week), " \
         "Very Active (Intense Exercise 6-7 times/week), Extra Active (Very intense Exercise daily or physical job)"
+    
+    CUISINE_CHOICES = [(0, 'none'), (1, 'chinese'), (2, 'malay'), (3, 'indian'), (4, 'western')]
 
 
     # Fields for calculation of BMI and Basal Metabolic Rate
@@ -41,6 +43,9 @@ class NewUserForm(UserCreationForm):
     birth_date = forms.DateField(required = True, widget = forms.SelectDateWidget(years = BIRTH_YEAR_CHOICES), initial = datetime.date(year=THIS_YEAR-18, month=1, day=1))
     gender = forms.ChoiceField(required = True, choices = [(0, 'Male'), (1, 'Female',)])
     activity = forms.ChoiceField(required = True, choices = ACTIVITY_CHOICES, help_text = ACTIVITY_HELP)
+
+    cuisine_preference = forms.ChoiceField(required = True, choices = CUISINE_CHOICES)
+    takes_beef = forms.ChoiceField(required = True, choices=[(0, 'yes'), (1, 'no')])
 
     # optional fields
     email = forms.EmailField(required=False, max_length=254) #, help_text='Please provide a valid email address.')
@@ -59,10 +64,10 @@ class NewUserForm(UserCreationForm):
     
     class Meta:
         model = User
-        fields = ('username', 'password1', 'password2', 'email', 'weight', 'height', 'gender', 'birth_date', 'activity')
+        fields = ('username', 'password1', 'password2', 'email', 'weight', 'height', 'gender', 'birth_date', 'activity', 'cuisine_preference', 'takes_beef')
 
 
 class UserUpdateForm(UserChangeForm):
      class Meta:
         model = User
-        fields = ('weight', 'height', 'activity')
+        fields = ('weight', 'height', 'activity', 'cuisine_preference')

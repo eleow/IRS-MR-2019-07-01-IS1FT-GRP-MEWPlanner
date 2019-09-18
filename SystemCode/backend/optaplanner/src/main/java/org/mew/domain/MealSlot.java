@@ -14,7 +14,7 @@ import org.optaplanner.core.api.domain.variable.PlanningVariable;
 @PlanningEntity(difficultyComparatorClass = MealSlotDifficultyComparator.class)
 public class MealSlot {
 	public enum Meal {
-		BREAKFAST(1), LUNCH(2), DINNER(3);
+		BREAKFAST(1), LUNCH(2), DINNER(3), SNACK1(4), SNACK2(5); // added snacks for diabetics
 		
 		private final int value;
 		private Meal(int value) {
@@ -70,7 +70,7 @@ public class MealSlot {
 		}
 		else {
 			
-			Set<Integer> test = MealSolution.getInstance().foodDB.stream()
+			Set<Integer> test = MealSolution.getInstance(new TargetValues()).foodDB.stream()
 					.filter(item -> item.type == type)
 					.map(item -> item.id)
 					.collect(Collectors.<Integer>toSet());

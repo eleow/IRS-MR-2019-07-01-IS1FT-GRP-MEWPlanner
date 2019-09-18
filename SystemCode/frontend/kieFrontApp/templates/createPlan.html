@@ -10,6 +10,26 @@
                     <h2 class="form-title">Hi <span style="color: #417690;">{{user.username}}</span>, let's review your data before creating your meals</h2>
                    
                     <div class="form-group">
+                            <label for="id_cuisine_preference">Cuisine preference:</label>
+                            <select name="cuisine_preference" class="form-input" id="id_cuisine_preference">
+                                <option value="0" {% if user.cuisine_preference == 0 %}selected{% endif %}>none</option>
+                                <option value="1" {% if user.cuisine_preference == 1 %}selected{% endif %}>chinese</option>
+                                <option value="2" {% if user.cuisine_preference == 2 %}selected{% endif %}>malay</option>
+                                <option value="3" {% if user.cuisine_preference == 3 %}selected{% endif %}>indian</option>
+                                <option value="4" {% if user.cuisine_preference == 4 %}selected{% endif %}>western</option>
+                            </select>
+                            <small style="color: grey"></small>
+                    </div>      
+                    <div class="form-group">
+                            <label for="id_takes_beef">Takes beef:</label>
+                            <select name="takes_beef" class="form-input" id="id_takes_beef">
+                                <option value="0" {% if user.takes_beef == 0 %}selected{% endif %}>yes</option>
+                                <option value="1" {% if user.takes_beef == 1 %}selected{% endif %}>no</option>
+                            </select>
+                            <small style="color: grey"></small>
+                    </div>
+                    <br />
+                    <div class="form-group">
                         <label for="id_weight">Weight (kg):</label>
                         <input type="number" class="form-input" name="weight" id="id_weight" min="20" max="200" step="1" value="{{ user.weight|floatformat:0}}"/>
                     </div>
@@ -94,7 +114,7 @@
                         <label for="id_calories">Recommended Daily Calorie Intake:</label>
                         <input type="text" class="form-input readonly" name="calories" id="id_calories" step="1" value="{{ Calories|floatformat:0 }}" readonly />
                         <small id="h_cal" style="color: red"></small>
-                    </div>
+                    </div>            
                     <br>
                     <div class="form-group">
                       <input type="submit" name="submit" id="createPlan_submit" class="form-submit" value="Create!"/>
