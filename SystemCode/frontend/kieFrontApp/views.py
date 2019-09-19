@@ -90,6 +90,7 @@ def CreateConfigIni(dirPath, fileName, debug_mode, sp_calories, dev_calories, ma
    f.write("max_caffeine = 1\n")
    f.write("carbs_frac = 0.5\n")
    f.write("dev_carbs = 0.05\n")
+   f.write("fats_frac = 0.3\n")
    f.write("diabetic = 1\n")
    f.write("prefers = " + cuisine_str+ "\n")
    f.write("takes_beef = " + str(takes_beef) + "\n")

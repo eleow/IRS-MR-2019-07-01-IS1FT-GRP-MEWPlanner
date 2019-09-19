@@ -31,6 +31,8 @@ public class TargetValues {
 		carbs_kcal_frac = 0.5f;
 		carbs_deviation_threshold = 0.05f;
 		
+		fat_kcal_frac = 0.3f;
+		
 		isDiabetic = true;
 		takesBeef = true;
 		food_preference = "none";

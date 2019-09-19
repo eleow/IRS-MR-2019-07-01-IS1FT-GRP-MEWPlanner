@@ -33,6 +33,7 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 		float carbs_deviation_threshold = solution.getTargets().carbs_deviation_threshold; // 0.05f;
 		float max_sugar = solution.getTargets().sugar_g; //30;
 		int max_caffeine = solution.getTargets().max_num_caffeine; //1
+		float target_fats = solution.getTargets().fat_kcal_frac; // 0.3f; // of total calories in kcal
 		
 		// Food preference
 		String prefers = solution.getTargets().food_preference;
@@ -48,6 +49,7 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 		int place_counter = 0;
 		
 		float total_carbs = 0;
+		float total_fats = 0;
 		float carbs_distribution_penalty = 0; // if meal has carbs exceeding range, penalise by difference
 		float total_sugar = 0;
 		Map<Meal, Float> carbs_in_meal = new HashMap<Meal, Float>();	
@@ -64,6 +66,7 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 			total_cal += item.calories;
 			total_sodium += item.sodium;
 			total_carbs += item.carbohydrates_kcal;
+			total_fats += item.fat_kcal;
 			if (item.sugar_g > 0 && !item.hasFruits) total_sugar += item.sugar_g;	// count sugar only if it is not a fruit
 			else unknown_sugar++;
 			
@@ -150,10 +153,10 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 		place_counter += (getPlaceCounter(getSetPlaces(solution, meals, Meal.BREAKFAST)));
 		place_counter += (getPlaceCounter(getSetPlaces(solution, meals, Meal.LUNCH)));
 		place_counter += (getPlaceCounter(getSetPlaces(solution, meals, Meal.DINNER)));			
-		hardScore += -place_counter * 100;
+		hardScore -= place_counter * 100;
 				
 		// Penalize duplicates and mismatch
-		hardScore += -((dup_counter + mismatch_counter) * 100);
+		hardScore -= ((dup_counter + mismatch_counter) * 100);
 		
 		// Penalize similar foods in a meal 
 		// TODO - Use word vector to ensure dissimilar foods
@@ -163,13 +166,23 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 		// Allow deviation from target calories within a threshold, else penalize
 		float cal_deviation = Math.abs((target_cal - total_cal)/(target_cal));
 		if (cal_deviation > deviation_threshold) {
-			hardScore += -(int)(cal_deviation * 1000);
+			hardScore -= (int)(cal_deviation * 1000);
 		}
 		
+		// Check carbs %kcal range
 		float carbs_deviation = Math.abs((target_carbs * total_cal - total_carbs)/ total_cal);
 		if (carbs_deviation > carbs_deviation_threshold) {
-			hardScore += -(int)(carbs_deviation * 1000);
+			hardScore -= (int)(carbs_deviation * 1000);
 		}
+		
+		// Check fats %kcal range
+		float fats_deviation =  (total_fats - target_fats * total_cal)/ total_cal;
+		if (fats_deviation > 0) {
+			hardScore -= (int)(fats_deviation * 100); // penalise high fat diet
+		}
+		else
+			softScore += (int)(fats_deviation * 10);	// reward low fat diet
+		
 				
 		// Must always have total of 3 mains else penalize
 		if (main_counter < 3) {
@@ -185,7 +198,7 @@ public class MealPlannerEasyScoreCalculator implements EasyScoreCalculator<MealS
 		
 		// caffeine should not exceed max_caffeine
 		if (caffeine_counter > max_caffeine) {
-			hardScore -= (caffeine_counter - max_caffeine) * 10;
+			hardScore -= (caffeine_counter - max_caffeine) * 100;
 		}
 		
 		// Do not exceed sodium threshold

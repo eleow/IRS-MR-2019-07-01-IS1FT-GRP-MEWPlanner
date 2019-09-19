@@ -41,6 +41,7 @@ public class MealPlannerApp {
 				float max_sugar = mapTargets.get("max_sugar", float.class, 30f);
 				float carbs_kcal_frac = mapTargets.get("carbs_frac", float.class, 0.5f);
 				float dev_carbs = mapTargets.get("dev_carbs", float.class, 0.05f);
+				float fats_kcal_frac = mapTargets.get("fats_frac", float.class, 0.3f);
 				
 				boolean isDiabetic = mapTargets.get("diabetic", int.class, 1) == 1? true: false;
 				boolean takesBeef = mapTargets.get("takes_beef", int.class, 1) == 1? true: false;
@@ -49,7 +50,7 @@ public class MealPlannerApp {
 				
 				
 				targets = new TargetValues(
-						cal, dev_cal, max_sodium, carbs_kcal_frac, 0f, 0f, max_history, max_sugar, dev_carbs,
+						cal, dev_cal, max_sodium, carbs_kcal_frac, fats_kcal_frac, 0f, max_history, max_sugar, dev_carbs,
 						isDiabetic, foodPreference, max_caffeine, takesBeef);
 						
 				numDays = mapTargets.get("days", int.class, 7);
@@ -62,7 +63,7 @@ public class MealPlannerApp {
 			}
 			
 		} else {
-			 targets = new TargetValues(2400f, 0.05f, 2300f, 0.5f, 0f, 0f, 7, 30, 0.05f,
+			 targets = new TargetValues(2000f, 0.05f, 2300f, 0.5f, 0.3f, 0f, 7, 30, 0.05f,
 					 true, "chinese", 1, true);
 		}
 

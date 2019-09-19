@@ -3,61 +3,62 @@ SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 Day,Meal,Type,Name,Calories,Carbohydrates,Fats,Protein,Sodium,Serving Size
-1,1,1,Avocado juice with added milk,127.50,49.41,60.56,17.53,52.50,Glass (250ml) (250g)
-1,1,4,Custard bun,178.29,122.39,26.86,29.04,100.17,Piece (63g)
-1,1,5,Ang koo kueh (green bean),144.84,114.93,20.09,9.81,14.28,Piece (51g)
-1,2,1,Milk tea no toppings 0% sugar,156.40,49.19,97.38,9.84,33.17,Cup (460g)
-1,2,2,Seafood risotto,579.70,261.95,196.35,121.41,908.82,Plate-23cm (374g)
-1,2,3,Cream puff,114.55,48.60,53.54,12.42,59.60,Piece (34g)
-1,3,1,Teh C kosong,26.00,12.17,7.74,6.09,15.00,Cup (100g)
-1,3,2,Spaghetti with tuna sauce,462.49,289.49,70.49,102.51,263.05,Plate-20cm (300g)
-1,3,3,Curry chicken with potato skin removed,251.13,57.98,88.53,104.61,507.63,Bowl-rice (11and 1/2 cm) (220g)
-2,1,1,Brewed coffee,3.70,2.94,0.00,0.76,3.10,1 portion (155g)
-2,1,4,Garlic bread,218.40,144.05,43.61,30.74,447.30,Whole (70g)
-2,1,5,Ang koo kueh (peanut),239.33,141.37,65.56,32.40,35.93,Piece (67.8g)
-2,2,1,Cappucino,76.83,46.26,7.00,23.57,63.04,1 portion (197g)
-2,2,2,Creamy mushroom pasta,596.70,312.40,181.82,102.48,866.32,Bowl-soup (16 and 1/2 cm) (442g)
-2,2,3,Omelette with long beans minced pork and prawn,208.19,4.15,121.78,82.25,688.85,Plate-16cm (101.6g)
-2,3,1,Soyabean milk without sugar,87.50,12.87,20.59,54.04,12.50,Glass (250ml) (250g)
-2,3,2,Cooked brown rice beehoon,218.24,203.49,0.00,14.75,14.26,Bowl-rice (11and 1/2 cm) (176g)
-2,3,3,Walnut paste,321.16,145.92,132.90,42.34,8.52,Bowl-dessert (15 cm) (259g)
-3,1,1,Root beer float,196.71,165.24,23.74,7.73,58.74,Glass (250ml) (300g)
-3,1,4,Rolls hamburger or hotdog plain,119.97,92.84,8.48,18.65,205.97,1 portion (43g)
-3,2,1,Cappucino,76.83,46.26,7.00,23.57,63.04,1 portion (197g)
-3,2,2,Macaroni soup,410.84,210.84,30.70,169.30,583.99,Bowl-soup (16 and 1/2 cm) (487.47g)
-3,2,3,Banana,67.21,63.24,0.92,3.05,0.76,Whole (medium) (118g)
-3,3,1,Cultured milk drink reduced sugar,28.60,24.72,0.28,3.60,22.10,Bottle (65g)
-3,3,2,Fried rice with ham and vegetables,395.75,295.55,52.08,48.12,453.25,Bowl-soup (16 and 1/2 cm) (250g)
-3,3,3,Omelette with prawn and green onion,637.66,2.04,452.76,182.86,330.69,Plate-23cm (181g)
-4,1,1,Milk tea no toppings 0% sugar,156.40,49.19,97.38,9.84,33.17,Cup (460g)
-4,1,4,Chocolate Croissant,375.99,229.06,112.69,34.25,296.31,Piece (83g)
-4,2,1,Soyabean milk without sugar,87.50,12.87,20.59,54.04,12.50,Glass (250ml) (250g)
-4,2,2,Braised chicken rice skinless chicken,503.14,322.98,69.27,110.89,1009.19,Plate-23cm (291g)
-4,2,3,Rambutan,9.97,9.41,0.08,0.48,0.84,Whole (35.2g)
-4,3,1,Brewed coffee,3.70,2.94,0.00,0.76,3.10,1 portion (155g)
-4,3,2,Fish head bee hoon,511.83,254.89,128.47,128.47,691.79,Bowl-soup (16 and 1/2 cm) (557g)
-4,3,3,Chocolate eclair,258.00,90.32,146.21,21.47,145.50,Piece (50g)
-5,1,1,Milk tea no toppings 0% sugar,156.40,49.19,97.38,9.84,33.17,Cup (460g)
-5,1,4,Cinnamon bun,282.03,215.16,41.09,25.77,443.98,1 portion (79g)
-5,2,1,Brewed coffee,3.70,2.94,0.00,0.76,3.10,1 portion (155g)
-5,2,2,Peanut and pork porridge,398.75,186.82,94.29,117.64,727.65,Bowl-soup (16 and 1/2 cm) (550g)
-5,2,3,Red ruby with coconut milk,295.64,143.15,137.03,15.46,68.46,Bowl-soup (16 and 1/2 cm) (389g)
-5,3,1,Prune juice,181.11,174.77,0.31,6.03,10.24,Cup (256g)
-5,3,2,Grilled salmon with potato & broccolli,416.01,148.04,57.98,209.99,666.99,Plate-23cm (490g)
-5,3,3,Braised chicken with sea cucumber,132.65,11.25,56.14,65.25,279.49,Plate-20cm (89.81g)
-6,1,1,Root beer float,196.71,165.24,23.74,7.73,58.74,Glass (250ml) (300g)
-6,1,4,Chicken pau,214.76,119.05,53.32,42.39,250.25,Whole (91g)
-6,2,1,Low fat milk fortified with protein,139.82,68.09,21.88,49.85,150.80,Cup (260g)
-6,2,2,Salmon Poke bowl,604.44,253.94,201.14,149.36,1248.30,Plate-23cm (438g)
-6,2,3,Mandarin orange,38.54,33.42,1.09,4.03,2.63,Whole (120g)
-6,3,1,Soyabean milk without sugar,87.50,12.87,20.59,54.04,12.50,Glass (250ml) (250g)
-6,3,2,Fried bee hoon with chicken and egg,369.20,217.89,51.31,100.00,346.76,Plate-23cm (284g)
-6,3,3,Almond paste,214.84,124.38,60.79,29.67,30.65,Bowl-dessert (15 cm) (262g)
-7,1,1,Low fat milk fortified with protein,139.82,68.09,21.88,49.85,150.80,Cup (260g)
-7,1,4,Bo Luo Bao (Pineapple Bun),322.63,204.01,84.27,34.36,226.38,Piece (77g)
-7,2,1,Root beer float,196.71,165.24,23.74,7.73,58.74,Glass (250ml) (300g)
-7,2,2,Ayam panggang,286.81,5.92,124.58,156.30,139.54,Piece (170.82g)
-7,2,3,Green bean soup,236.20,168.20,7.17,60.83,4.29,Bowl-soup (16 and 1/2 cm) (429.45g)
-7,3,1,Green tea drink,35.00,35.00,0.00,0.00,7.50,Glass (250ml) (250g)
-7,3,2,Duck porridge,595.92,249.64,80.53,265.75,1272.06,Bowl-soup (16 and 1/2 cm) (573g)
-7,3,3,Peach,57.94,56.68,0.63,0.63,2.48,Whole (138g)
+1,1,1,Chrysanthemum tea no sugar,10.00,8.00,0.00,2.00,53.00,1 cup (250 g),0.2
+1,1,4,Chocolate Croissant,376.10,166.68,184.50,24.92,296.31,Piece (83g),12.37
+1,1,5,Ang koo kueh (green bean),144.80,97.92,38.52,8.36,14.28,Piece (51g),4.13
+1,2,1,Morinaga lemon tea no sugar,4.00,4.00,0.00,0.00,0.00,1 cup (240 g),0.0
+1,2,2,Banana blossom salad with beef,440.20,235.60,106.20,98.40,400.00,1 serve (430 g),10.1
+1,2,3,Sardine curry puff,255.99,101.04,127.71,27.24,332.10,Piece (82g),2.54
+1,3,1,Green tea (no sugar),4.00,2.00,0.00,2.00,7.50,Cup (250g),0.0
+1,3,2,Chicken rice with skin removed,635.03,336.40,195.75,102.88,1035.54,Plate-23cm (365g),0.36
+1,3,3,Loquat raw peeled,3.35,2.56,0.27,0.52,0.26,Whole (20g),0.64
+2,1,1,Low fat milk fortified with protein,143.00,58.24,42.12,42.64,150.80,Cup (260g),0.0
+2,1,4,Iced fruit bun,223.52,140.12,54.00,29.40,150.00,Piece (75g),11.33
+2,1,5,Ang koo kueh (peanut),239.16,105.24,109.80,24.12,35.93,Piece (67.8g),0.0
+2,2,1,Chrysanthemum tea no sugar,10.00,8.00,0.00,2.00,53.00,1 cup (250 g),0.2
+2,2,2,Fried olive brown rice less oil,326.00,233.20,61.20,31.60,350.00,1 chinese bowl (234 g),4.0
+2,2,3,French fries,316.83,139.12,159.75,17.96,286.76,1 portion (107g),0.64
+2,3,1,Oolong tea no sugar,4.00,2.00,0.00,2.00,13.00,1 cup (240 g),0.0
+2,3,2,Nasi ayam skin removed,649.10,343.20,200.70,105.20,1059.00,1 portion (365 g),0.4
+2,3,3,Orange,40.95,35.52,0.99,4.44,3.33,Whole (150g),8.88
+3,1,1,Low fat milk fortified with protein,143.00,58.24,42.12,42.64,150.80,Cup (260g),0.0
+3,1,4,Peanut mee chang kueh,307.92,218.88,54.00,35.04,253.20,Piece (120g),8.76
+3,2,1,Chrysanthemum tea no sugar,10.00,8.00,0.00,2.00,53.00,1 cup (250 g),0.2
+3,2,2,Economical rice + 4 vegetables,462.20,290.40,106.20,65.60,690.00,1 plate (600 g),9.4
+3,2,3,Char siew soh,165.45,48.92,99.81,16.72,156.20,Piece (44g),1.63
+3,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+3,3,2,Duck rice with skin removed,530.16,334.40,98.64,97.12,325.55,Plate-23cm (350g),1.58
+3,3,3,Eel grilled Japanese style,296.86,13.96,190.26,92.64,565.34,Piece (96g),3.49
+4,1,1,Black tea (no sugar),2.00,1.00,0.00,1.00,2.50,Cup (250g),0.0
+4,1,4,Bagel plain,324.00,256.32,17.28,50.40,640.80,1 portion (120g),0.0
+4,2,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+4,2,2,Rice + pork rib king,526.40,270.80,136.80,118.80,446.00,1 plate (320 g),2.4
+4,2,3,Fried potato in spiced batter,165.24,53.12,96.48,15.64,202.20,Piece (67.4g),0.61
+4,3,1,Chrysanthemum tea no sugar,10.00,8.00,0.00,2.00,53.00,1 cup (250 g),0.2
+4,3,2,Ebi salmon avocado don,727.90,282.00,265.50,180.40,662.00,1 portion (496 g),1.5
+4,3,3,Cream puff,114.57,30.68,76.05,7.84,59.60,Piece (34g),2.33
+5,1,1,Chinese tea fermented infusion,2.00,0.00,0.00,2.00,5.00,1 cup (250 g),0.0
+5,1,4,Bread french,393.05,306.80,22.05,64.20,884.00,1 portion (136g),3.54
+5,2,1,Chrysanthemum tea no sugar,10.00,8.00,0.00,2.00,53.00,1 cup (250 g),0.2
+5,2,2,Aglio olio,484.80,264.00,147.60,73.20,500.00,1 serve (180 g),2.4
+5,2,3,Banana chips,255.89,112.08,138.69,5.12,107.95,1 portion (50g),3.99
+5,3,1,Low fat milk fortified with protein,143.00,58.24,42.12,42.64,150.80,Cup (260g),0.0
+5,3,2,Fried olive rice with chicken,712.90,282.00,310.50,120.40,454.00,1 plate (420 g),3.3
+5,3,3,Peach,44.80,43.24,1.08,0.48,2.48,Whole (138g),10.56
+6,1,1,Low fat milk fortified with protein,143.00,58.24,42.12,42.64,150.80,Cup (260g),0.0
+6,1,4,Cinnamon bun,282.01,182.00,78.21,21.80,443.98,1 portion (79g),9.56
+6,2,1,Black tea (no sugar),2.00,1.00,0.00,1.00,2.50,Cup (250g),0.0
+6,2,2,Fried olive rice with vegetable,439.80,253.60,149.40,36.80,58.00,1 plate (272 g),0.6
+6,2,3,Hoon kuih banana,81.30,48.48,27.90,4.92,52.51,Piece (89g),3.25
+6,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+6,3,2,Nasi padang + sambal goreng + fried chicken wing,870.00,284.40,378.00,207.60,1001.00,1 plate (618 g),6.3
+6,3,3,Peanut cake,56.80,20.40,29.16,7.24,0.72,Piece (12g),3.72
+7,1,1,Low fat milk fortified with protein,143.00,58.24,42.12,42.64,150.80,Cup (260g),0.0
+7,1,4,Bo Luo Bao (Pineapple Bun),322.39,153.68,142.83,25.88,226.38,Piece (77g),10.24
+7,2,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
+7,2,2,Thunder tea brown rice hakka minced vegetables rice,498.00,264.00,162.00,72.00,43.00,1 big bowl (440 g),0.0
+7,2,3,Lotus paste with salted egg pastry,106.29,47.32,51.57,7.40,18.50,Piece (25g),4.7
+7,3,1,Ice Mountain sparkling water,0.00,0.00,0.00,0.00,1.00,1 bottle (375 g),0.0
+7,3,2,Char kway teow,740.36,304.12,345.60,90.64,1459.20,Plate-23cm (384g),3.07
+7,3,3,Pumpkin and sweet potato in sweetened coconut milk,54.91,14.20,39.15,1.56,17.30,Piece (30g),2.24
+~END
