@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,6 @@
     <meta name="author" content="MEW">
     <meta name="keywords" content="Meal Planner">
     <title>{% block title %}{% endblock %}</title>
-    {% load static %}
     <link rel="shortcut icon" type="image/png" href="{% static 'images/icons/favicon.png' %}"/>
     <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
