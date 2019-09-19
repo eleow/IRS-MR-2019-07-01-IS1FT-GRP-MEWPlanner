@@ -6,7 +6,7 @@ User = get_user_model()
 import datetime
 
 THIS_YEAR = datetime.datetime.now().year
-BIRTH_YEAR_CHOICES =  list(range(THIS_YEAR-60, THIS_YEAR-18))
+BIRTH_YEAR_CHOICES =  list(range(THIS_YEAR-65, THIS_YEAR-18))
 # PLACEHOLDER_DICT = {
 #     'username': 'Your username',
 #     'password1': 'Password',
