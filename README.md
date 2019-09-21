@@ -9,7 +9,11 @@
 
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
 
-XXXX
+Diabetes Mellitus is a chronic condition in which the body has elevated glucose levels. It is a global public health problem and Type 2 diabetes accounts for around 90% of diabetes cases worldwide. Disturbingly, the prevalence of diabetes in Singapore is set to increase from 7.3% in 1990 to 15% in 2050, as people lead more sedentary lifestyles and consume high-energy diets.
+
+Type 2 diabetes is a costly disease that can cause complications like blindness and lower limb amputation if not properly managed. Dietary intervention is key to maintaining blood glucose levels and managing the disease but people with the condition may not necessarily have the knowledge to make better food choices or they may find meal planning to be too time-consuming a task.
+
+Therefore, we decided to develop a meal planning system to help these people plan their meals, so that it would be easier to manage their condition
 
 ---
 
@@ -18,7 +22,7 @@ XXXX
 | Official Full Name  | Student ID (MTech Applicable)  | Work Items (Who Did What) | Email (Optional) |
 | :------------ |:---------------:| :-----| :-----|
 | Ng Mei Ying | A0198546L | • Nutritionist sourcing and liaison <br>• Database creation and clean-up <br>• Knowledge discovery and analysis<br>• Genetic Algorithm optimisation <br>• Project Report<br>• Peer survey design| e0402087@u.nus.edu |
-| Edmund Leow | A0198458H | • Website design and implementation<br>• Business rules formulation<br>• OptaPlanner optimisation<br>• System Integration<br>• User Guide and Video<br>• Heroku deployment | e0401999@u.nus.edu |
+| Edmund Leow | A0198458H | • Website design and implementation<br>• Business rules formulation<br>• OptaPlanner optimisation<br>• System architecture and integration<br>• User Guide and Video<br>• Heroku deployment | e0401999@u.nus.edu |
 | Wilson Lum Kok Keong| A0198478A | • Literature review<br>• System testing<br>• Peer survey conduct and dissemination<br>| e0402019@u.nus.edu |
 
 ---
@@ -56,7 +60,7 @@ The Project Report can be downloaded from this repository. Direct link can be fo
 
 ## SECTION 7 : MISCELLANEOUS
 
-XXX
+User Survey results have also been included in the project report.
 
 ---
 
