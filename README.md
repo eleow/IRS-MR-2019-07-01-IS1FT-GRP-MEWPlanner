@@ -9,11 +9,10 @@
 
 ## SECTION 2 : EXECUTIVE SUMMARY / PAPER ABSTRACT
 
-Diabetes Mellitus is a chronic condition in which the body has elevated glucose levels. It is a global public health problem and Type 2 diabetes accounts for around 90% of diabetes cases worldwide. Disturbingly, the prevalence of diabetes in Singapore is set to increase from 7.3% in 1990 to 15% in 2050, as people lead more sedentary lifestyles and consume high-energy diets.
+Diabetes Mellitus is a chronic condition in which the body has elevated glucose levels. It is a global public health problem and Type 2 diabetes accounts for around 90% of diabetes cases worldwide.Singapore ranks second in the proportion of diabetics among developed countries, behind US, with 10.63% of the population having the disease. Disturbingly, the prevalence of diabetes in Singapore is set to increase from 7.3% in 1990 to 15% in 2050, as people lead more sedentary lifestyles and consume high-energy diets.
 
-Type 2 diabetes is a costly disease that can cause complications like blindness and lower limb amputation if not properly managed. Dietary intervention is key to maintaining blood glucose levels and managing the disease but people with the condition may not necessarily have the knowledge to make better food choices or they may find meal planning to be too time-consuming a task.
-
-Therefore, we decided to develop a meal planning system to help these people plan their meals, so that it would be easier to manage their condition
+Type 2 diabetes is a costly disease that can cause complications like blindness and lower limb amputation if not properly managed. Dietary intervention is key to maintaining blood glucose levels and managing the disease but people with the condition may not necessarily have the knowledge to make better food choices or they may find meal planning to be too time-consuming.
+Therefore, we decided to develop a meal planning system to help plan their meals and make it easier to manage the condition.
 
 ---
 
