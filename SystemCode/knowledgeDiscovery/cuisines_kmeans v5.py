@@ -17,7 +17,7 @@ import numpy as np
 
 data = pd.read_excel('FoodDatabase v1.8.xlsx', sheet_name='AllFood-FoodType')
 data = data[(data['Cuisine'].isin(['chinese', 'malay', 'indian', 'western']) & (data['Opta Type'] == 'Main') & (data['Analysis'] == 1))]
-data = data.drop(['Analysis', 'MealPanner', 'HasBeef', 'IsCaffeinated', 'Multiplier', 'Carbohydrates %', 'Protein %', 'Fats %'], axis=1)
+data = data.drop(['Analysis', 'MealPlanner', 'HasBeef', 'IsCaffeinated', 'Multiplier', 'Carbohydrates %', 'Protein %', 'Fats %'], axis=1)
 data['weight'] = data['Per Serving Household Measure'].str.extract('.*?(\(([0-9]*?) g\))')[1].astype('float')
 data.describe()
 data['pct_protein'] = data['Protein (g)'] * 4 / data['Energy'] * 100
