@@ -3,6 +3,9 @@ Food Name,Food Group,Food Sub Group,Per Serving Household Measure,Opta Type,Opta
 (kcal)","Fats
 (kcal)","Protein
 (kcal)",Total Calories (kcal)
+3-in-1 cereal,CEREAL AND CEREAL PRODUCTS,Breakfast cereals,Sachet (30g),Drink,,,,,5.91,134.1,52.44,27.27,9.48,89.19
+"3-in-1 coffee, less sugar, low fat (HCS)",HEALTHIER CHOICE SYMBOL (HCS) PRODUCTS,Beverages and sweetened drinks,Packet (18g),Drink,,,,1,4.9,8.51,58.96,11.16,3.08,73.2
+4 in 1 brown rice cereal,CEREAL AND CEREAL PRODUCTS,Breakfast cereals,Sachet (30g),Drink,,,,,8.91,84,99.96,22.41,6,128.37
 "6-inch Ham Sandwich, Subway",FAST FOODS,All fast food outlets in alphabetical order,Whole (216g),Main,Subway,western,,,7,1069.2,148,41.4,69.12,258.52
 "6-inch Italian BMT Sandwich, Subway",FAST FOODS,All fast food outlets in alphabetical order,Whole (228g),Main,Subway,western,,,7,1605.12,152.04,180,91.2,423.24
 "6-inch Meatball Marinara Sandwich, Subway",FAST FOODS,All fast food outlets in alphabetical order,Whole (339g),Main,Subway,western,,,10.98,1223.79,211.96,180,81.36,473.32
@@ -19,8 +22,8 @@ Food Name,Food Group,Food Sub Group,Per Serving Household Measure,Opta Type,Opta
 "6-inch Veggie Delite Sandwich, Subway",FAST FOODS,All fast food outlets in alphabetical order,Whole (153g),Main,Subway,western,,,5,284.58,140.04,24.21,36.72,200.97
 Ayam penyet with rice,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (499g),Main,,malay,,,12.72,1591.76,308.8,292.32,337.12,938.24
 Baked Chicken Rice,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,1 portion (444g),Main,,western,,,4.88,1349.76,309.04,314.1,170.48,793.62
-Baked Fish Rice,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,1 portion (450g),Main,western,western,,,4.95,1399.5,289.8,303.39,136.8,729.99
-Baked otah bun,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and snacks",Whole (67g),Breakfast,western,western,,,-1,263.98,112.56,49.41,28.4,190.37
+Baked Fish Rice,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,1 portion (450g),Main,,western,,,4.95,1399.5,289.8,303.39,136.8,729.99
+Baked otah bun,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and snacks",Whole (67g),Breakfast,,western,,,0.5,263.98,112.56,49.41,28.4,190.37
 Ban mian soup,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (528g),Main,,chinese,,,0.01,2196.48,192.2,194.85,86.6,473.65
 Banana,FRUIT AND FRUIT PRODUCTS,Fresh fruits,Whole (medium) (50g),Fruits,,,,,5.12,3.85,35.28,1.08,2.16,38.52
 Bee hoon soto,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (902.21g),Main,,malay,,,5.86,1537.37,123.8,155.88,79.04,358.72
@@ -29,18 +32,19 @@ Beef Bolognese,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,
 Beef Don,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,1 portion (385g),Main,,japanese,1,,3.47,908.6,314.16,101.52,110.88,526.56
 Beef Taco,MEAT AND MEAT PRODUCTS,Beef and veal,1 portion (78g),Main,,western,1,,0.75,348.66,44.76,94.59,33.68,173.03
 Beef and Teriyaki Chicken Bento,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Egg based dishes,1 portion (489g),Main,,japanese,1,,4.4,1515.9,381.44,187.92,172.12,741.48
-Beef and egg porridge,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (403g),Breakfast,,chinese,1,,0.52,1354.08,41.44,179.55,64.48,285.47
+Beef and egg porridge,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (403g),Main,,chinese,1,,0.52,1354.08,41.44,179.55,64.48,285.47
 Beef ball kway teow soup,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (550g),Main,,chinese,1,,5.5,1496,345.4,128.7,154,628.1
 Beef hor fun,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (481g),Main,,chinese,1,,0,1717.17,379.04,238.14,78.88,696.06
 Beef noodles soup,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (789g),Main,,chinese,1,,13,3978.37,239.64,53.82,116.56,410.02
 "Beef udon, soup","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (632g),Main,,japanese,1,,7.52,2051.47,218.4,142.2,98.08,458.68
 Beehoon goreng,OTHER MIXED ETHNIC DISHES,Cereal based dishes,Plate-23cm (170g),Main,,malay,,,1.24,722.5,162.52,102.51,29.24,294.27
 Black carrot cake,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and snacks",1 portion (350g),Main,,chinese,,,13.62,1937.08,263.08,240.66,52.64,556.38
+Black pearl cereal beverage,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Packet (30g),Drink,,,,,8.37,10.8,78.84,36.72,14.4,129.96
 Black tea (no sugar),BEVERAGES,Non-alcoholic beverages,Cup (250g),Drink,,,,1,0,2.5,1,0,1,2
 Braised duck with yam rice,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (350g),Main,,chinese,,,1.75,1081.5,382.2,88.2,84,554.4
-Coconut bread,CEREAL AND CEREAL PRODUCTS,Breads and rolls,Whole (45g),Breakfast,,western,,,-1,34.2,87.12,121.5,24.68,233.3
 "Bread, focaccia","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and snacks",Whole (53g),Breakfast,,western,,,1.01,340.26,102.2,38.16,22.48,162.84
 "Bread, focaccia, with sun-dried tomato","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and snacks",Whole (80g),Breakfast,,western,1,,2.32,336.8,93.76,131.04,20.48,245.28
+Brewed coffee,BEVERAGES,Non-alcoholic beverages,1 portion (155g),Drink,,,,1,0.62,3.1,2.48,0,0.64,3.12
 Chicken curry bun,CEREAL AND CEREAL PRODUCTS,"Buns (baked and steamed,plain and with sweet fillings)",Whole (78.5g),Breakfast,,western,,,0,293.59,127.16,60.75,25.44,213.35
 Coconut bun,CEREAL AND CEREAL PRODUCTS,"Buns (baked and steamed,plain and with sweet fillings)",Whole (69g),Breakfast,,western,,,10.21,160.08,106,103.05,20.16,229.21
 Dried shrimp bun,CEREAL AND CEREAL PRODUCTS,"Buns (baked and steamed,plain and with sweet fillings)",Piece (80g),Breakfast,,western,,,9.12,524,117.12,115.2,42.88,275.2
@@ -50,7 +54,7 @@ Century egg porridge,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based d
 Chao sheng mian,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (470g),Main,,chinese,,,1.5,1194.46,216.28,225.63,94.64,536.55
 Chapati,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and snacks",Piece (46g),Main,,indian,,,1.01,119.14,85.92,45.09,12.32,143.33
 Char kway teow,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (384g),Main,,chinese,,,3.07,1459.2,304.12,345.6,90.64,740.36
-Char siew chee cheong fun,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and snacks",Piece (80.5g),Breakfast,,chinese,,,-1,204.47,45.08,11.61,8.04,64.73
+Char siew chee cheong fun,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and snacks",Piece (80.5g),Breakfast,,chinese,,,3,204.47,45.08,11.61,8.04,64.73
 Char siew rice,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (327g),Main,,chinese,,,13.08,879.63,364.92,147.15,94.16,606.23
 Chasoba,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (275g),Main,,japanese,,,3,556.88,112.44,17.82,39.92,170.18
 Chicken and Mushroom Bun,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Piece (93g),Breakfast,,chinese,,,7.16,372.93,116.44,88.92,40.92,246.28
@@ -63,16 +67,15 @@ Chicken pau,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts 
 "Chicken rice, with skin removed","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (365g),Main,,chinese,,,0.36,1035.54,336.4,195.75,102.88,635.03
 Chinese pear,FRUIT AND FRUIT PRODUCTS,Fresh fruits,Whole (169g),Fruits,,,,,8.91,6.29,47.76,2.79,3.16,53.71
 Chirashi Don,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,1 portion (409g),Main,,japanese,,,5.32,1472.4,343.56,63.72,121.08,528.36
-Chocolate Croissant,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and snacks",Piece (83g),Breakfast,,western,,,12.37,296.31,166.68,184.5,24.92,376.1
-Claypot chicken with dark soya sauce,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Meat based dishes,Bowl-soup (16 and 1/2 cm) (120g),Main,,chinese,,,0.6,681.48,4.96,70.65,56.4,132.01
 "Claypot noodles, with mixed vegetables","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (502g),Main,,chinese,,,3.51,1270.06,142.56,162.63,36.16,341.35
 "Claypot rice, with mixed vegetable","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (407g),Main,,chinese,,,4.07,1416.36,253.96,120.87,45.6,420.43
 "Claypot rice, with stewed beef","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (407g),Main,,chinese,1,,2.85,879.12,343.52,161.19,136.76,641.47
 Coca Cola Light,BEVERAGES,Non-alcoholic beverages,Can (330g),Drink,,,,,0,19.8,1.32,0,1.32,2.64
+"Coffee, decaffeinated, instant, powder",BEVERAGES,Non-alcoholic beverages,Teaspoon (2g),Drink,,,,1,0.5,0.46,3.4,0,0.92,4.32
 Cranberry Cheese Bun,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Piece (67g),Breakfast,,western,,,10.32,202.34,115.52,81.18,22.24,218.94
 Crayfish pasta,CEREAL AND CEREAL PRODUCTS,Pasta and noodles and 'dough wrappers',Plate-23cm (562g),Main,,western,,,16.3,1641.04,292.24,325.26,125.88,743.38
+"Cultured milk drink, reduced sugar",HEALTHIER CHOICE SYMBOL (HCS) PRODUCTS,Dairy products,Bottle (65g),Drink,,,,,6.24,22.1,24.96,0.63,3.64,29.23
 Curry udon with potato & carrot,CEREAL AND CEREAL PRODUCTS,Pasta and noodles and 'dough wrappers',Bowl-soup (16 and 1/2 cm) (524g),Main,,japanese,,,8.38,1477.68,241.04,90.09,52.4,383.53
-"Deli Style Roll, Subway",FAST FOODS,All fast food outlets in alphabetical order,Whole (58g),Snack,Subway,western,,,1.97,309.72,116,19.8,20.88,156.68
 Dry ban mian,CEREAL AND CEREAL PRODUCTS,Pasta and noodles and 'dough wrappers',Bowl-soup (16 and 1/2 cm) (547g),Main,,chinese,,,10.94,1854.33,347.88,260.91,140.04,748.83
 Dry chicken and mushroom noodles,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (397g),Main,,chinese,,,1.59,1699.16,201.68,132.21,106.4,440.29
 Dry duck noodles,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (327g),Main,,chinese,,,0,1370.13,266.84,135.36,96.8,499
@@ -88,7 +91,6 @@ Hard boiled egg,EGG AND EGG PRODUCTS,Hen eggs,Whole (55g),Breakfast,,chinese,,,0
 Espresso,BEVERAGES,Non-alcoholic beverages,1 portion (30g),Drink,,,,1,0,4.2,0,0.45,0.16,0.61
 "Fish ball mee pok, dry","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (450g),Main,,chinese,,,9.45,2551.5,241.2,121.5,124.2,486.9
 Fish ball noodles soup,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (775g),Main,,chinese,,,6.74,3802.15,295.44,96.93,130.52,522.89
-Fish porridge,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (559g),Breakfast,,chinese,,,-1,1347.19,129.68,25.2,55.92,210.8
 French Toast,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,1 portion (96g),Breakfast,,western,,,7.2,309.12,94.48,85.05,41.08,220.61
 Fried bee hoon with chicken and egg,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (284g),Main,,chinese,,,1.45,346.76,185.64,98.37,85.2,369.21
 Fried ebi & teriyaki chicken bento (tested chicken only),CEREAL AND CEREAL PRODUCTS,Grains and flours,1 portion (495g),Main,,japanese,,,12.87,2316.6,227.72,636.21,405.92,1269.85
@@ -110,7 +112,6 @@ Black grapes,FRUIT AND FRUIT PRODUCTS,Fresh fruits,Cup (50g),Fruits,,,,,6.86,1.4
 "Gravy, mee rebus","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Sauces, gravies and dressings",1 portion (222.18g),Main,,malay,,,10.22,742.08,121.76,42.03,22.2,185.99
 "Gravy, mee siam","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Sauces, gravies and dressings",Bowl-soup (16 and 1/2 cm) (329g),Main,,malay,,,38.16,2197.72,180.28,62.19,25,267.47
 Green tea (no sugar),BEVERAGES,Non-alcoholic beverages,Cup (250g),Drink,,,,1,0,7.5,2,0,2,4
-Grilled salmon with potato & broccolli,FAST FOODS,All fast food outlets in alphabetical order,Plate-23cm (490g),Main,,western,,,0.98,666.99,124.08,109.35,176,409.43
 Hokkien mee,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (442g),Main,,chinese,,,17.24,1423.24,277.56,171.09,72.48,521.13
 Hot and spicy beef noodles soup,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (279g),Main,,chinese,1,,0.39,967.29,34.16,38.88,77.44,150.48
 Indian style bee hoon goreng,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (281.46g),Main,,indian,,,1.13,1148.36,226.28,212.76,59.68,498.72
@@ -120,14 +121,14 @@ Japanese black pepper noodles,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cerea
 Japanese mushroom noodles,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Packet (307g),MAin,,japanese,,,14.53,3466.98,240.24,110.61,79.36,430.21
 Japanese shio ramen,CEREAL AND CEREAL PRODUCTS,Pasta and noodles and 'dough wrappers',Bowl-soup (16 and 1/2 cm) (676g),Main,,japanese,,,6.76,3136.64,237.96,229.41,156.84,624.21
 Japanese shoyu ramen,CEREAL AND CEREAL PRODUCTS,Pasta and noodles and 'dough wrappers',Bowl-soup (16 and 1/2 cm) (659g),Main,,japanese,,,6.59,3123.66,245.16,250.92,134.44,630.52
+Kopi O siu dai,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Beverages,Cup (200 ml),Drink,,,,1,9.12,17.46,36.48,15.75,1.56,53.79
 Kway teow goreng,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (380g),Main,,malay,,,2.66,1968.4,320.72,259.92,74.48,655.12
 "Kway teow, bandung, style",OTHER MIXED ETHNIC DISHES,Cereal based dishes,Bowl-rice (11and 1/2 cm) (450g),Main,,malay,,,10.04,1143,230.4,243,68.4,541.8
-Laksa,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (650g),Main,,malay,,,3,7904,231.4,356.85,109.2,697.45
 "Laksa lemak, without gravy","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (585g),Main,,malay,,,8.13,1592.96,254.6,424.89,86.36,765.85
 Laksa yong tauhu,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (602g),Main,,chinese,,,3.01,2215.36,202.28,335.88,93.92,632.08
+"Lassi, sweet","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Beverages,Glass (250ml) (192.48g),Drink,,,,1,7.89,34.65,32.32,45,1.52,78.84
 Lentil with rice,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Pulses based dishes,1 portion (282g),Main,,indian,,,2.23,496.94,196.56,70.38,64.76,331.7
 Lontong goreng,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-16cm (146.9g),Main,,malay,,,4.88,516.65,69.64,106.92,42.6,219.16
-Lor mee,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (640g),MAin,,chinese,,,0,2538,220.32,102.06,58.32,380.7
 Low fat milk fortified with protein,MILK AND MILK PRODUCTS,Milks,Cup (260g),Drink,,,,,0,150.8,58.24,42.12,42.64,143
 MOS rice burger with chicken,FAST FOODS,All fast food outlets in alphabetical order,Whole (160g),Main,MOS,western,,,4.8,65.6,208.64,46.08,67.2,321.92
 Mac and cheese,CEREAL AND CEREAL PRODUCTS,Pasta and noodles and 'dough wrappers',Bowl-soup (16 and 1/2 cm) (341g),Main,,western,,,5.46,1275.34,182.76,247.95,94.12,524.83
@@ -142,7 +143,9 @@ Mee rebus,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate
 Mee siam,CEREAL AND CEREAL PRODUCTS,Grains and flours,Bowl-soup (16 and 1/2 cm) (624g),Main,,malay,,,39.31,2808,319.48,166.23,74.88,560.59
 Mee soto,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (541g),Main,,malay,,,0,2677.95,240.2,116.82,77.92,434.94
 "Mee, bandung style",OTHER MIXED ETHNIC DISHES,Cereal based dishes,Bowl-rice (11and 1/2 cm) (450g),Main,,malay,,,9.81,1924.34,225.2,141.39,77.6,444.19
-Minced pork porridge,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (524g),Breakfast,,chinese,,,0,738.84,167.68,89.64,62.88,320.2
+"Milk tea no toppings, 0% sugar",BEVERAGES,Non-alcoholic beverages,Cup (460g),Drink,,,,1,6.9,33.17,27.6,122.94,5.52,156.06
+"Milk, skimmed, UHT",HEALTHIER CHOICE SYMBOL (HCS) PRODUCTS,Dairy products,Cup (200 ml),Drink,,,,,7.25,97.5,29,0,36,65
+Minced pork porridge,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (524g),Main,,chinese,,,0,738.84,167.68,89.64,62.88,320.2
 Miso ramen,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (553g),Main,,japanese,,,1.33,1715.41,192,55.26,69.24,316.5
 Mushroom and minced pork noodles soup,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (594g),Main,,chinese,,,2.67,1731.51,200.52,110.16,69.84,380.52
 Nasi daging,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (590g),Main,,malay,,,23.6,2351.15,575.84,175.23,148.68,899.75
@@ -164,7 +167,6 @@ Parathas,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and
 Passion fruit,FRUIT AND FRUIT PRODUCTS,Fresh fruits,Whole (medium) (35g),Fruits,,,,,2.04,5.1,17.04,1.17,1.6,19.81
 "Pasta, marinara",CEREAL AND CEREAL PRODUCTS,Pasta and noodles and 'dough wrappers',Cup (230g),Main,,western,,,1.38,604.9,122.36,99.36,87.4,309.12
 Peach,FRUIT AND FRUIT PRODUCTS,Fresh fruits,Whole (138g),Fruits,,,,,10.56,2.48,43.24,1.08,0.48,44.8
-Peanut and pork porridge,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (550g),Breakfast,,chinese,,,1.65,727.65,144.32,163.89,90.88,399.09
 Penang fried kway teow,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (300g),Main,,chinese,,,3,1476,285.6,270,57.6,613.2
 Penang laksa,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (629g),Main,,malay,,,16.22,3352.98,258.2,40.23,82.48,380.91
 Penang prawn noodle,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Bowl-soup (16 and 1/2 cm) (685g),Main,,chinese,,,7.54,2144.05,282.24,80.19,131.52,493.95
@@ -210,6 +212,7 @@ Sliced fish hor fun,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based di
 Sliced fish porridge,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,1 portion (730g),Main,,chinese,,,0,1285.53,300.76,51.93,102.2,454.89
 Soto ayam,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Meat based dishes,Bowl-soup (16 and 1/2 cm) (569g),Main,,malay,,,6.26,2418.25,70.56,71.73,77.4,219.69
 "Soya bean curd, unsweetened","MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE","Local cakes, desserts and snacks",Bowl-soup (16 and 1/2 cm) (619.9g),Breakfast,,chinese,,,0,31,2.48,16.74,47.12,66.34
+Soyabean milk without sugar,BEVERAGES,Non-alcoholic beverages,Glass (250ml) (250g),Drink,,,,,2.5,12.5,10,36,42,88
 Spaghetti with tuna sauce,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-20cm (300g),Main,,western,,,4.4,263.05,241.96,132.57,85.68,460.21
 Steamed glutinous rice,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-16cm (147.61g),Main,,chinese,,,5.43,771.11,136.68,140.13,64.96,341.77
 Stir fried ee fu noodles,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-20cm (418.28g),Main,,chinese,,,0,2217.8,221.68,281.97,101.88,605.53
@@ -236,10 +239,7 @@ Plain Water,BEVERAGES,Non-alcoholic beverages,Cup (250g),Drink,,,,,0,0,0,0,0,0
 Watermelon,FRUIT AND FRUIT PRODUCTS,Fresh fruits,Slice (119g),Fruits,,,,,3.53,2.67,16,1.8,2.12,19.92
 Yaki udon with chicken,CEREAL AND CEREAL PRODUCTS,Pasta and noodles and 'dough wrappers',Plate-23cm (445g),Main,,japanese,,,7.12,1926.85,208.28,214.65,94.36,517.29
 fried rice,"MIXED ETHNIC DISHES, ANALYZED IN SINGAPORE",Cereal based dishes,Plate-23cm (309g),Main,,chinese,,,7.35,1850.91,243.88,183.24,72.68,499.8
-"Roasted green tea, no sugar",,,1 cup (200 ml),Drink,,,,1,0,8,0,0,2,2
-Chinese tea,,,1 cup (200 ml),Drink,,,,1,0,5,1.2,0,2,3.2
 "Oolong tea, no sugar",,,1 cup (200 ml),Drink,,,,1,0,13,2,0,2,4
-"Chamomile tea, no sugar",,,1 cup (200 ml),Drink,,,,1,0,2,2,0,0,2
 "Chrysanthemum tea, no sugar",,,1 cup (200 ml),Drink,,,,1,0.2,53,8,0,2,10
 Coca Cola Zero Sugar,,,1 can,Drink,,,,,0,40,0,0,0,0
 "Tea O without sugar, Teh O Kosong",,,1 cup (200 ml),Drink,,,,1,0,0,0,0,1.2,1.2
@@ -330,6 +330,7 @@ Claypot rice with stewed beef,,,1 portion (407 g),Main,,chinese,1,,2.9,879,343.6
 "Fried rice, vegetarian",,,1 portion (335 g),Main,,chinese,,,1,1276,379.2,142.2,57.6,579
 Nasi ayam,,,1 plate (382 g),Main,,malay,,,0,1463,339.2,234,114.8,688
 "Nasi ayam, skin removed",,,1 portion (365 g),Main,,malay,,,0.4,1059,343.2,200.7,105.2,649.1
+Nasi briyani rice set,,,1 plate (354 g),Main,,malay,,,2.1,889,436,140.4,41.2,617.6
 Nasi briyani rice with chicken,,,1 plate (488 g),Main,,malay,,,0,1655,408,313.2,155.6,876.8
 Nasi briyani rice with mutton,,,1 plate (505 g),Main,,malay,,,0,1858,386,223.2,143.6,752.8
 "Briyani rice, with vegetable",,,1 portion (399 g),Main,,malay,,,6.4,1022,308,204.3,46.4,558.7
@@ -489,7 +490,7 @@ Uncle Tobys wholegrain muesli bars - forest fruits,,,1 serving (31.3 g),Breakfas
 "Mr Bean, millet grains soy porridge - peanuts and tofu",,,1 bowl (513 g),Main,MrBean,chinese,,,3.3,755.9,150.8,63.9,78.8,293.5
 "Mr Bean, millet grains soy porridge - vegetarian jade tofu",,,1 bowl (481 g),Main,MrBean,chinese,,,3.1,731.1,178.4,46.8,56.8,282
 "Mr Bean, millet grains soy porridge - spicy minced chicken and mushroom",,,1 bowl (479 g),Main,MrBean,chinese,,,1.7,842.4,140,113.4,66.8,320.2
-"Mr Bean, millet grains soy porridge - chicken meatballs",,,1 bowl (504 g),Main,,,,,2.5,1053.3,167.6,74.7,78,320.3
+"Mr Bean, millet grains soy porridge - chicken meatballs",,,1 bowl (504 g),Main,,chinese,,,2.5,1053.3,167.6,74.7,78,320.3
 "Mixed nuts, unsalted, roasted without oil",,,1 handful (30 g),Snack,,,,,2.9,99,59.6,82.8,18,160.4
 Tong Garden honey roasted with seasame nuts mixed walnuts,,,13 walnuts (30 g),Snack,,,,,7,65,44,108,16,168
 Tong Garden seaweed & wasabi cashew nuts mixed macademias,,,1 handful (30 g),Snack,,,,,2,105,48,99,12,159
@@ -506,15 +507,14 @@ Chicken spaghetti bolognaise,,,1 plate (343 g),Main,,western,,,8.8,494,292.8,122
 "Spaghetti and meatballs, regular",,,1 portion (565 g),Main,,western,,,11.5,1983,350.4,432.9,177.2,960.5
 "Seafood pasta, tomato-based, wholemeal spaghetti",,,1 serve (395 g),Main,,western,,,9.9,590,289.6,72,119.6,481.2
 "Masala thosai, tosei (1 piece) + coriander chutney",,,1 portion (214 g),Main,,indian,,,1.7,664,238,94.5,30,362.5
-"Soyabean milk, without sugar",,,1 cup (200 ml),Drink,,,,,2.8,30,12,45,27.2,84.2
-"Oatmeal + low fat milk, with honey (reduced honey)",,,1 cup (250 g),Breakfast,,,,,13.7,40,130.4,26.1,29.2,185.7
-"Oatmeal + low fat milk, without sugar",,,1 cup (250 g),Breakfast,,,,,7.9,40,107.2,26.1,29.2,162.5
+"Oatmeal + low fat milk, with honey (reduced honey)",,,1 cup (250 g),Breakfast,,western,,,13.7,40,130.4,26.1,29.2,185.7
+"Oatmeal + low fat milk, without sugar",,,1 cup (250 g),Breakfast,,western,,,7.9,40,107.2,26.1,29.2,162.5
 "Overnight oats, oats + low fat milk, unsweetened",,,1 portion (295 g),Breakfast,,,,,12.5,106,161.2,65.7,54.4,281.3
 "Overnight oats, oats + low fat milk & plain yoghurt, unsweetened",,,1 portion (293 g),Breakfast,,,,,14.9,140,170.8,66.6,62.4,299.8
 "Overnight oats, oats + low fat milk + seeds, unsweetened",,,1 portion (321 g),Breakfast,,,,,12.9,109,170.8,183.6,82.4,436.8
 "Overnight oats, oats + low fat milk & plain yoghurt + seeds, unsweetened",,,1 portion (453 g),Breakfast,,,,,15.3,143,180.4,184.5,90.4,455.3
-"Oats + soya milk, without sugar",,,1 bowl (282 g),Breakfast,,,,,2.8,31,91.2,69.3,40.8,201.3
-"Oats + soya milk + raisin, without sugar",,,1 bowl (300 g),Breakfast,,,,,15.5,33,143.6,70.2,43.2,257
+"Oats + soya milk, without sugar",,,1 bowl (282 g),Breakfast,,western,,,2.8,31,91.2,69.3,40.8,201.3
+"Oats + soya milk + raisin, without sugar",,,1 bowl (300 g),Breakfast,,western,,,15.5,33,143.6,70.2,43.2,257
 "Tea C without sugar, Teh C Kosong",,,1 cup (200 ml),Drink,,,,1,3.1,32,12.4,22.5,10,44.9
 "Tea C less sugar, Teh C Siu Dai",,,1 cup (200 ml),Drink,,,,1,9.1,32,36.4,22.5,10,68.9
 "Tea tarik, teh tarik, less sugar",,,1 cup (200 ml),Drink,,,,1,9.1,32,36.4,22.5,10,68.9

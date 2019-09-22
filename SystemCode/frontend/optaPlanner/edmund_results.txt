@@ -1,53 +1,62 @@
-calories (kcal): 2518.0, cal threshold: 0.05, sodium (mg):2300.0, sugar (g):30.0, carbs: 0.5 (+-0.05), max_history: 7
+calories (kcal): 3011.0, cal threshold: 0.05, sodium (mg):2300.0, sugar (g):30.0, carbs: 0.5 (+-0.05), isDiabetic: true, takesBeef:false, max_history: 7
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 Day,Meal,Type,Name,Calories,Carbohydrates,Fats,Protein,Sodium,Serving Size
-1,1,1,Low fat milk fortified with protein,143.00,58.24,42.12,42.64,150.80,Cup (260g),0.0
-1,1,4,Overnight oats oats + low fat milk & plain yoghurt + seeds unsweetened,455.30,180.40,184.50,90.40,143.00,1 portion (453 g),15.3
-1,2,1,Plain low fat milk,94.20,31.20,27.00,36.00,107.50,1 cup (200 ml),7.8
-1,2,2,Duck rice skin removed,563.60,355.60,104.40,103.60,347.00,1 plate (350 g),1.8
-1,2,3,Kale caesar salad,146.00,56.00,54.00,36.00,160.00,1 plate (120 g),2.0
-1,3,1,Soyabean milk without sugar,84.20,12.00,45.00,27.20,30.00,1 cup (200 ml),2.8
-1,3,2,Nasi goreng sayuran fried rice,917.90,615.60,243.90,58.40,976.00,1 plate (350 g),0.4
-2,1,1,Tea C without sugar Teh C Kosong,44.90,12.40,22.50,10.00,32.00,1 cup (200 ml),3.1
-2,1,4,Carman's nut bars - almond with hazelnut & vanilla,170.80,50.80,97.20,22.80,3.00,1 serving (35 g),5.1
-2,2,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
-2,2,2,Salmon don,1710.29,1083.80,354.33,272.16,967.95,Bowl-soup (16 and 1/2 cm) (405g),5.67
-2,3,1,Coca Cola Light,2.64,1.32,0.00,1.32,19.80,Can (330g),0.0
-2,3,2,Nasi padang + sambal goreng,705.90,275.20,276.30,154.40,961.00,1 plate (522 g),6.3
-3,1,1,Mr Bean pearly soya milk,237.60,120.80,57.60,59.20,43.00,1 cup (473 ml),7.9
-3,1,4,Mr Bean peanut butter pancake,364.10,181.20,134.10,48.80,13.00,1 pancake (126 g),15.0
-3,2,1,Chrysanthemum tea no sugar,10.00,8.00,0.00,2.00,53.00,1 cup (200 ml),0.2
-3,2,2,Ebi salmon avocado don,727.90,282.00,265.50,180.40,662.00,1 portion (496 g),1.5
-3,2,3,Pasta salad non-creamy,129.50,74.40,42.30,12.80,122.00,1 cup (115 g),2.5
-3,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
-3,3,2,Salmon and Teriyaki Chicken Bento,666.67,399.60,152.91,114.16,1097.16,1 portion (446g),5.35
-3,3,3,Kale summer salad with blueberries cranberries and apple,280.90,64.80,198.90,17.20,136.00,1 serve (169 g),14.4
-4,1,1,Mr Bean black soya milk,231.61,63.24,90.09,78.28,29.00,1 cup (473 ml),5.01
-4,1,4,Mr Bean kaya cheese pancake,289.40,186.80,73.80,28.80,128.80,1 pancake (136 g),13.3
-4,2,1,Tea tarik teh tarik less sugar,68.90,36.40,22.50,10.00,32.00,1 cup (200 ml),9.1
-4,2,2,Nasi padang + sambal goreng + fried chicken wing,870.00,284.40,378.00,207.60,1001.00,1 plate (618 g),6.3
-4,2,3,Baby spinach rocket & tomatoes salad with balsamic vinaigrette,76.30,26.40,42.30,7.60,193.00,1 bowl (162 g),3.8
-4,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
-4,3,2,Duck rice,691.30,408.40,184.50,98.40,562.00,1 plate (410 g),29.1
-4,3,3,Cherry tomato celery & olive salad with balsami vinaigrette dressing,185.30,25.20,155.70,4.40,337.00,1 bowl (151 g),4.2
-5,1,1,Tea C less sugar Teh C Siu Dai,68.90,36.40,22.50,10.00,32.00,1 cup (200 ml),9.1
+1,1,1,Mr Bean pearly soya milk,237.60,120.80,57.60,59.20,43.00,1 cup (473 ml),7.9
+1,1,4,Mr Bean peanut butter pancake,364.10,181.20,134.10,48.80,13.00,1 pancake (126 g),15.0
+1,4,6,Mixed nuts unsalted roasted without oil,160.40,59.60,82.80,18.00,99.00,1 handful (30 g),2.9
+1,2,1,Milk tea no toppings 0% sugar,156.06,27.60,122.94,5.52,33.17,Cup (460g),6.9
+1,2,2,Roasted duck rice,708.88,387.04,210.96,110.88,686.14,Bowl-soup (16 and 1/2 cm) (410g),6.22
+1,5,6,Deli Style Roll Subway,156.68,116.00,19.80,20.88,309.72,Whole (58g),1.97
+1,3,1,4 in 1 brown rice cereal,128.37,99.96,22.41,6.00,84.00,Sachet (30g),8.91
+1,3,2,Nasi padang + sambal goreng + fried chicken wing,870.00,284.40,378.00,207.60,1001.00,1 plate (618 g),6.3
+2,1,1,Mr Bean black soya milk,231.61,63.24,90.09,78.28,29.00,1 cup (473 ml),5.01
+2,1,4,Mr Bean kaya cheese pancake,289.40,186.80,73.80,28.80,128.80,1 pancake (136 g),13.3
+2,4,6,Tong Garden salted cashew nuts mixed macademias,200.40,42.00,151.20,7.20,32.00,1 handful (30 g),3.2
+2,2,1,Milk tea no toppings 0% sugar,156.06,27.60,122.94,5.52,33.17,Cup (460g),6.9
+2,2,2,Pork katsu don,911.82,412.12,322.38,177.32,1533.44,Bowl-soup (16 and 1/2 cm) (599g),5.39
+2,5,6,Fairprice baked almonds,150.30,52.00,67.50,30.80,1.00,1 handful (30 g),0.7
+2,3,1,Low fat milk fortified with protein,143.00,58.24,42.12,42.64,150.80,Cup (260g),0.0
+2,3,2,Duck rice skin removed,563.60,355.60,104.40,103.60,347.00,1 plate (350 g),1.8
+3,1,1,Black pearl cereal beverage,129.96,78.84,36.72,14.40,10.80,Packet (30g),8.37
+3,1,4,Overnight oats oats + low fat milk & plain yoghurt + seeds unsweetened,455.30,180.40,184.50,90.40,143.00,1 portion (453 g),15.3
+3,4,6,Chinese pear,53.71,47.76,2.79,3.16,6.29,Whole (169g),8.91
+3,2,1,Milk tea no toppings 0% sugar,156.06,27.60,122.94,5.52,33.17,Cup (460g),6.9
+3,2,2,Nasi ayam skin removed,649.10,343.20,200.70,105.20,1059.00,1 portion (365 g),0.4
+3,5,6,Tong Garden seaweed & wasabi cashew nuts mixed macademias,159.00,48.00,99.00,12.00,105.00,1 handful (30 g),2.0
+3,3,1,Soyabean milk without sugar,88.00,10.00,36.00,42.00,12.50,Glass (250ml) (250g),2.5
+3,3,2,Fried fish head beehoon soup,662.40,323.60,208.80,130.00,822.00,1 big bowl (663 g),2.0
+4,1,1,3-in-1 coffee less sugar low fat (HCS),73.20,58.96,11.16,3.08,8.51,Packet (18g),4.9
+4,1,4,Overnight oats oats + low fat milk & plain yoghurt unsweetened,299.80,170.80,66.60,62.40,140.00,1 portion (293 g),14.9
+4,4,6,Tong Garden honey roasted with seasame nuts mixed walnuts,168.00,44.00,108.00,16.00,65.00,13 walnuts (30 g),7.0
+4,2,1,3-in-1 cereal,89.19,52.44,27.27,9.48,134.10,Sachet (30g),5.91
+4,2,2,Ebi salmon avocado don,727.90,282.00,265.50,180.40,662.00,1 portion (496 g),1.5
+4,5,6,Peach,44.80,43.24,1.08,0.48,2.48,Whole (138g),10.56
+4,3,1,Milk skimmed UHT,65.00,29.00,0.00,36.00,97.50,Cup (200 ml),7.25
+4,3,2,Indian white rice + 1 non-fried meat + 1 non-fried vegetables + 1 non-legumes,716.30,308.40,236.70,171.20,1184.00,1 plate (525 g),3.1
+5,1,1,3-in-1 coffee less sugar low fat (HCS),73.20,58.96,11.16,3.08,8.51,Packet (18g),4.9
 5,1,4,Overnight oats oats + low fat milk + seeds unsweetened,436.80,170.80,183.60,82.40,109.00,1 portion (321 g),12.9
-5,2,1,Tea tarik teh tarik less sugar,68.90,36.40,22.50,10.00,32.00,1 cup (200 ml),9.1
-5,2,2,Economical rice+1 deep fried meat+2 vegetables,718.20,337.60,268.20,112.40,870.00,1 plate (500 g),12.7
-5,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
-5,3,2,Seafood fried rice,907.84,498.20,296.64,113.00,1245.48,Bowl-soup (16 and 1/2 cm) (428g),22.68
-6,1,1,Mr Bean classic soya milk,142.00,5.70,8.00,11.80,23.50,1 cup (473 ml),4.1
-6,1,4,Mr Bean granola beancurd,269.66,151.20,71.10,47.36,26.30,1 serving (313 g),9.3
-6,2,1,Tea tarik teh tarik less sugar,68.90,36.40,22.50,10.00,32.00,1 cup (200 ml),9.1
-6,2,2,Indian white rice + 1 deep-fried meat + 1 non-fried vegetables,605.10,267.60,197.10,140.40,527.00,1 plate (394 g),2.1
+5,4,6,Pineapple,48.42,45.24,0.90,2.28,10.45,Slice (95g),9.98
+5,2,1,Coca Cola Light,2.64,1.32,0.00,1.32,19.80,Can (330g),0.0
+5,2,2,Fried ebi + chicken teriyaki bento set,687.90,348.00,222.30,117.60,934.00,1 set (597 g),8.8
+5,5,6,Tong Garden smoked cashew nuts mixed almonds,191.00,32.00,135.00,24.00,75.00,1 handful (30 g),2.0
+5,3,1,Plain low fat milk,94.20,31.20,27.00,36.00,107.50,1 cup (200 ml),7.8
+5,3,2,Indian white rice + 1 non-fried meat + 1 non-fried legumes,630.90,291.60,177.30,162.00,892.00,1 plate (425 g),1.7
+6,1,1,Mr Bean grass jelly soya milk,138.80,64.00,36.00,38.80,55.30,1 cup (473 ml),4.7
+6,1,4,Mr Bean cheesy wholemeal hazelnut pancake,342.00,184.00,126.00,32.00,264.00,1 pancake (132 g),26.0
+6,4,6,Chinese pear,53.71,47.76,2.79,3.16,6.29,Whole (169g),8.91
+6,2,1,Milk tea no toppings 0% sugar,156.06,27.60,122.94,5.52,33.17,Cup (460g),6.9
+6,2,2,Chicken spaghetti bolognaise,535.20,292.80,122.40,120.00,494.00,1 plate (343 g),8.8
+6,5,6,Golden kiwi,41.55,37.12,0.63,3.80,4.38,Whole (83g),6.87
 6,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
-6,3,2,Oyakodon,799.66,412.04,198.18,189.44,1675.36,1 portion (592g),3.55
-7,1,1,Mr Bean grass jelly soya milk,138.80,64.00,36.00,38.80,55.30,1 cup (473 ml),4.7
-7,1,4,Mr Bean soya beancurd no sugar added,83.30,16.00,40.50,26.80,4.00,1 bowl (286 g),2.0
-7,2,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
-7,2,2,Salmon don,1710.29,1083.80,354.33,272.16,967.95,Bowl-soup (16 and 1/2 cm) (405g),5.67
-7,3,1,Plain Water,0.00,0.00,0.00,0.00,0.00,Cup (250g),0.0
-7,3,2,Economical porridge + 4 vegetables + 1 deep-fried meat,695.70,261.60,310.50,123.60,1208.00,1 plate (753 g),17.1
+6,3,2,Baked Chicken Rice,793.62,309.04,314.10,170.48,1349.76,1 portion (444g),4.88
+7,1,1,3-in-1 coffee less sugar low fat (HCS),73.20,58.96,11.16,3.08,8.51,Packet (18g),4.9
+7,1,4,Overnight oats oats + low fat milk unsweetened,281.30,161.20,65.70,54.40,106.00,1 portion (295 g),12.5
+7,4,6,Peach,44.80,43.24,1.08,0.48,2.48,Whole (138g),10.56
+7,2,1,Milk tea no toppings 0% sugar,156.06,27.60,122.94,5.52,33.17,Cup (460g),6.9
+7,2,2,Nasi padang + sambal goreng,705.90,275.20,276.30,154.40,961.00,1 plate (522 g),6.3
+7,5,6,Orange,40.95,35.52,0.99,4.44,3.33,Whole (150g),8.88
+7,3,1,Cultured milk drink reduced sugar,29.23,24.96,0.63,3.64,22.10,Bottle (65g),6.24
+7,3,2,Indian white rice + 2 non-fried meat,731.90,306.40,254.70,170.80,1028.00,1 plate (499 g),2.6
 ~END
