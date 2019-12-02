@@ -28,7 +28,7 @@ Therefore, we decided to develop a meal planning system to help plan their meals
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-Full-res video available on Youtube at https://youtu.be/I9mAj20b7AI
+Full-res video available on Youtube at https://youtu.be/CJPlZSCt0VE
 
 Lower-res video can be downloaded from this repository. Direct link can be found below.
 
