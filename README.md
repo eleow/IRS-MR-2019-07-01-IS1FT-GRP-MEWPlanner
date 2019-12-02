@@ -28,6 +28,9 @@ Therefore, we decided to develop a meal planning system to help plan their meals
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
+<a href="https://youtu.be/CJPlZSCt0VE" target="_blank"><img src="./Video/video_screenshot.png" 
+alt="ITLMS" width="640" height="360" border="10" /></a>
+
 Full-res video available on Youtube at https://youtu.be/CJPlZSCt0VE
 
 Lower-res video can be downloaded from this repository. Direct link can be found below.
